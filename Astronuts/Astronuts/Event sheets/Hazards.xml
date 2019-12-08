@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Hazards</name>
+    <events>
+        <event-group description="" sid="241560090864113" title="Losing">
+            <sub-events>
+                <event-block sid="273742969474254">
+                    <conditions>
+                        <condition id="0" name="On function" sid="377573600374500" type="Function">
+                            <param id="0" name="Name">&quot;losing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Play (by name)" sid="384728672066297" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Hit Lava&quot; &amp; str(choose(1,2))</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-15</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="470958001244452" type="Audio">
+                            <param id="0" name="Audio file">astro_ohno</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="289718415079681" type="Audio">
+                            <param id="0" name="Audio file">Level Failed</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="729002465620942" type="camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="495426689330905" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="633269604524663" type="player">
+                            <param id="0" name="Object">deathParticle</param>
+                            <param id="1" name="Layer">self.LayerName</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="966278337661796" type="playerAnimations">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="786577807672323" type="playerAnimations">
+                            <param id="0" name="Acceleration">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="581007546315263" type="playerAnimations">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="180147074302602" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="486198515920613" type="camera">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="211364148440476" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="856285970004213" type="player">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="309598945954842" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="211996461505628" type="player">
+                            <param id="0" name="Vector Y">-250</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="235497698768121" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="979307561234658" type="endText">
+                            <param id="0" name="Text">&quot;Oh no!&quot; &amp; newline &amp; &quot;Try level &quot; &amp; LayoutName &amp; &quot; again.&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="230185631474309" type="System">
+                            <param id="0" name="Layer">&quot;End&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="6" name="Stop" sid="892402666085330" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block any="1" sid="218897429658520">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="390593410697290" type="player">
+                            <param id="0" name="Object">deathFromBelow</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="220387997321005" type="player">
+                            <param id="0" name="Object">catHeadBody</param>
+                        </condition>
+                        <condition disabled="1" id="0" name="On collision with another object" sid="729592703151177" type="player">
+                            <param id="0" name="Object">catPawLeft</param>
+                        </condition>
+                        <condition disabled="1" id="0" name="On collision with another object" sid="389594748223542" type="player">
+                            <param id="0" name="Object">catPawRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="765127609850978" type="Function">
+                            <param id="0" name="Name">&quot;losing&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="695123524575264">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="738692033207708" title="pusher">
+            <sub-events>
+                <event-block sid="833066107252747">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="528760545058313" type="System">
+                            <param id="0" name="Object">pusher</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="107304780374974">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="292088108230949" type="System">
+                                    <param id="0" name="First value">pusher.Sine.CyclePosition</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">0.25</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="389994422385234" type="System">
+                                    <param id="0" name="First value">pusher.Sine.CyclePosition</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0.75</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="379828931677365" type="pusher">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598877417761577">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="631071336393705" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="527055177242178" type="pusher">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="965380811449155" title="spikey">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="148149264456123">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="789525548301053" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="685065130340334" type="spikey">
+                            <param id="0" name="Instance variable">countdown</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="361798413923158" type="spikey">
+                            <param id="0" name="Instance variable">countdown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="752236510824049">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="622665057860703" type="spikey">
+                            <param id="0" name="Instance variable">countdown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="265818043096464">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="257283689508705" type="spikey">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="832526676668874" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="945143094443109" type="spikey">
+                                    <param id="0" name="Animation">&quot;Spikey&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="590996068512662" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="888716770463255" type="spikey">
+                                    <param id="0" name="Speed">-10</param>
+                                </action>
+                                <action id="3" name="Start" sid="113821756672780" type="spikey">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="805859683878470" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="949239976000448" type="spikey">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="222222683277287" type="spikey">
+                                    <param id="0" name="Instance variable">countdown</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="817781701952898">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>safe when square</comment>
+                <event-block disabled="1" sid="858539022055275">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="242985821366953" type="spikey">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="784460825883595" type="spikey">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="123979813346228">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="642289882634144" type="spikey">
+                            <param id="0" name="Animation">&quot;Spikey&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="467038965307492" type="spikey">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="133418868069345" type="spikey">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="977186795697676">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="903143059412804" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="686306154351195" type="spikey">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>dangerous when spikey</comment>
+                <event-block sid="979349681181709">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="352926450780771" type="spikey">
+                            <param id="0" name="Animation">&quot;Spikey&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="249556932780804" type="spikey">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="210609885876419">
+                            <conditions>
+                                <condition disabled="1" id="1" name="Is overlapping another object" sid="309670464943448" type="player">
+                                    <param id="0" name="Object">spikey</param>
+                                </condition>
+                                <condition id="9" name="Is overlapping at offset" sid="372339177259287" type="player">
+                                    <param id="0" name="Object">spikey</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="421257170917290" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="273631793899496" type="Function">
+                                    <param id="0" name="Name">&quot;losing&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="481686380505050">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="525665291165967">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="782965953353759">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="242243290095231" title="Cat">
+            <sub-events>
+                <event-block sid="863615778020851">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>Game starts with paws moving up.</comment>
+                <event-block sid="115706281703741">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="135405882324702" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="240687727495431" type="deathFromBelow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288836407447057">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="972587605823885" type="Touch" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="829835680789326" type="deathFromBelow">
+                            <param id="0" name="Instance variable">moving</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="984471653385005" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;Win&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="421262997627917" type="camera">
+                            <param id="0" name="Magnitude">5</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="471687809430968" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="859186573954022" type="deathFromBelow">
+                            <param id="0" name="Instance variable">moving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="996426270190313">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="848546275523483" type="System">
+                            <param id="0" name="Layer">&quot;End&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="863974089791270" type="System">
+                            <param id="0" name="Layer">&quot;Result&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="923139333024921" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Win&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="548903178273313" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Death from below.</comment>
+                        <event-block sid="729368706575924">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="504326270330312" type="deathFromBelow">
+                                    <param id="0" name="Instance variable">moving</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="581317985675196" type="deathFromBelow">
+                                    <param id="0" name="Angle">270</param>
+                                    <param id="1" name="Distance">0.15*score</param>
+                                </action>
+                                <action disabled="1" id="-20" name="Set layout scale" sid="868677747688736" type="System">
+                                    <param id="0" name="Scale">0.3</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="209263177037117">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="462388500333663" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">400</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="424817935030874" type="deathFromBelow">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="922043562213915">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="567937436739987" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">400</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="277159212465565" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="546525582001485" type="deathFromBelow">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">2*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="536962585570838">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="602376650022281" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">500</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="638192906023385" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">600</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="571571028602058" type="deathFromBelow">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">3*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="794435362129481">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="818819407847003" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, deathFromBelow.X, deathFromBelow.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">600</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="805931108128364" type="deathFromBelow">
+                                            <param id="0" name="Angle">270</param>
+                                            <param id="1" name="Distance">5*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="294032631865389">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Death from below.</comment>
+                        <event-block sid="704071848040932">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="181796901850296" type="deathFromBelow">
+                                    <param id="0" name="Instance variable">moving</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="646360334373079" type="deathFromBelow">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Death from above.</comment>
+                        <event-block sid="567928197245680">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="868412284890154" type="catHeadBody">
+                                    <param id="0" name="Instance variable">moving</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="536069436303851" type="player">
+                                    <param id="0" name="Jump strength">50</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="609742280114292" type="deathFromBelow">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">6*60*dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="135577741934866">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="575792456671571" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">400</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="553197261797747" type="catHeadBody">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">1.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="638930037963587" type="catPawLeft">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">1.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="562803233727156" type="catPawRight">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">1.5*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="342667922119769">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="253048609419218" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">400</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="372811033983231" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="983099221851956" type="catHeadBody">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">3*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="175036068371302" type="catPawLeft">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">3*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="276827393906367" type="catPawRight">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">3*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="441066433504488">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="472517924472508" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">500</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="562296487383274" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">600</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="320433922175423" type="catHeadBody">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">4.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="776339206958670" type="catPawLeft">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">4.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="129548936377268" type="catPawRight">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">4.5*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="329168604068711">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="569086437627476" type="System">
+                                            <param id="0" name="First value">distance(player.X, player.Y, catHeadBody.X, catHeadBody.Y)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">600</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="912015704389141" type="catHeadBody">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">9.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="805634963293845" type="catPawLeft">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">9.5*60*dt</param>
+                                        </action>
+                                        <action id="-23" name="Move at angle" sid="836778662883131" type="catPawRight">
+                                            <param id="0" name="Angle">90</param>
+                                            <param id="1" name="Distance">9.5*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Death from above.</comment>
+                        <event-block sid="788635353863586">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="705311877194366" type="catHeadBody">
+                                    <param id="0" name="Instance variable">moving</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="149783639652905" type="catHeadBody">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Cat breaks platforms on the way down.</comment>
+                <event-block sid="121840842913314">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="680574891066110" type="catHeadBody">
+                            <param id="0" name="Object">platform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="578337735594332" type="platform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="270714598981585" type="platform">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="146470340623935" type="platform">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="126039798830555" type="platform">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="7" name="Apply torque towards angle" sid="418583686559769" type="platform">
+                            <param id="0" name="Torque">5</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                        </action>
+                        <action id="0" name="Play" sid="540370968559728" type="Audio">
+                            <param id="0" name="Audio file">groundpound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="617824797874492">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="557600287479527" type="catHeadBody">
+                            <param id="0" name="Object">MetalPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="988775293523711" type="MetalPlatform">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="336848179736018" type="MetalPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="516830114373965" type="MetalPlatform">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="295205669773707" type="MetalPlatform">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="7" name="Apply torque towards angle" sid="984532757583747" type="MetalPlatform">
+                            <param id="0" name="Torque">5</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                        </action>
+                        <action id="0" name="Play" sid="764062620738676" type="Audio">
+                            <param id="0" name="Audio file">groundpound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-4</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="777739742899352">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="117748122867968" type="catHeadBody">
+                            <param id="0" name="Object">SpaceCloudPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="534445809502437" type="SpaceCloudPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="189173027774953" type="SpaceCloudPlatform">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="187723932677155" type="SpaceCloudPlatform">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="415213351783141" type="SpaceCloudPlatform">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="7" name="Apply torque towards angle" sid="840367247620078" type="SpaceCloudPlatform">
+                            <param id="0" name="Torque">5</param>
+                            <param id="1" name="Angle">angle(catHeadBody.X, catHeadBody.Y, Self.X, Self.Y)</param>
+                        </action>
+                        <action id="0" name="Play" sid="841204925139133" type="Audio">
+                            <param id="0" name="Audio file">groundpound</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-8</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="107396061069364">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="199499401673784" title="Cat face">
+            <sub-events>
+                <event-block sid="301346758636405">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="251382083822253" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="295229792358095" type="System">
+                            <param id="0" name="Object to create">catHeadBody</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="X">160</param>
+                            <param id="3" name="Y">103</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="998018572282215" type="catHeadBody">
+                            <param id="0" name="Width">385</param>
+                            <param id="1" name="Height">342</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="923896049084008" type="System">
+                            <param id="0" name="Object to create">catPawLeft</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="X">20</param>
+                            <param id="3" name="Y">75</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="496927922977595" type="catPawLeft" />
+                        <action id="-3" name="Create object" sid="117891112816437" type="System">
+                            <param id="0" name="Object to create">catPawRight</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="X">297</param>
+                            <param id="3" name="Y">75</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="278921315356184" type="catPawRight" />
+                        <action id="0" name="Spawn another object" sid="991709145857880" type="catHeadBody">
+                            <param id="0" name="Object">catEarLeft</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="285981263320356" type="catHeadBody">
+                            <param id="0" name="Object">catEarRight</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="717508148119351" type="catHeadBody">
+                            <param id="0" name="Object">catEyeLeft</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="441768716853484" type="catHeadBody">
+                            <param id="0" name="Object">catEyeRight</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="279977800799306" type="catHeadBody">
+                            <param id="0" name="Object">catMouth</param>
+                            <param id="1" name="Layer">&quot;CAT&quot;</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="923753362118372" type="catEarLeft">
+                            <param id="0" name="Pin to">catHeadBody</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="184177743976450" type="catEarRight">
+                            <param id="0" name="Pin to">catHeadBody</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="161292285638340" type="catEyeLeft">
+                            <param id="0" name="Pin to">catHeadBody</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="217092258181353" type="catEyeRight">
+                            <param id="0" name="Pin to">catHeadBody</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="566810301131748" type="catMouth">
+                            <param id="0" name="Pin to">catHeadBody</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="964991867439859">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="166753651816330">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

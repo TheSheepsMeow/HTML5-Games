@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LocalStorage</name>
+    <events>
+        <event-group description="" sid="752009417797046" title="LocalStorage">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="795735902606216">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="371894010690108" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="972899538362729" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231957826533222">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="698162075169196" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="567262509987224" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="750543857571765">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="670778839464416" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="183668838467099" type="System">
+                            <param id="0" name="Variable">bestWorld</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991200890070287">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="571786023515316" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="102565271988033" type="System">
+                            <param id="0" name="Variable">bestWorld</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="706249740106950">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="947226123490124" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="131829270969411" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889069403818211">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="157889715293009" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="200144512617348" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="907814613049893">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="196331834745192" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="101121418797629" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258951517414252">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="848141889854079" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="659778740016446" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="257434757015149">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="305978084606742" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">bestWorld</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="646566747116876" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">bestLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="334366377580932" type="System">
+                            <param id="0" name="Variable">bestWorld</param>
+                            <param id="1" name="Value">World</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="421298493001319" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">Level</param>
+                        </action>
+                        <action id="0" name="Call function" sid="912400106832468" type="Function">
+                            <param id="0" name="Name">&quot;setBestWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="927239155406226" type="Function">
+                            <param id="0" name="Name">&quot;setBestLevel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="461863349142826">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="719710157343612" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">bestWorld</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="920591251284977" type="System">
+                            <param id="0" name="Variable">bestWorld</param>
+                            <param id="1" name="Value">World</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="869183108497839" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">Level</param>
+                        </action>
+                        <action id="0" name="Call function" sid="616186077057824" type="Function">
+                            <param id="0" name="Name">&quot;setBestWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="348208945584205" type="Function">
+                            <param id="0" name="Name">&quot;setBestLevel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="842772448240963">
+                    <conditions>
+                        <condition id="0" name="On function" sid="571033197085151" type="Function">
+                            <param id="0" name="Name">&quot;setBestWorld&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="413170574103595" type="System">
+                            <param id="0" name="Variable">bestWorld</param>
+                            <param id="1" name="Value">World</param>
+                        </action>
+                        <action id="0" name="Set item" sid="748209954874459" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestWorld_key&quot;</param>
+                            <param id="1" name="Value">bestWorld</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="729092672043428">
+                    <conditions>
+                        <condition id="0" name="On function" sid="627662783364618" type="Function">
+                            <param id="0" name="Name">&quot;setBestLevel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="758949898009955" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">Level</param>
+                        </action>
+                        <action id="0" name="Set item" sid="581410442253189" type="LocalStorage">
+                            <param id="0" name="Key">&quot;bestLevel_key&quot;</param>
+                            <param id="1" name="Value">bestLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment></comment>
+    </events>
+</c2eventsheet>

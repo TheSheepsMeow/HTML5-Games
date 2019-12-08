@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader</name>
+    <events>
+        <variable constant="0" name="isSiteLocked" sid="338738069948020" static="0" type="number">0</variable>
+        <comment></comment>
+        <event-group description="" sid="218757557169129" title="Mode">
+            <sub-events>
+                <event-block sid="996408532433697">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="978677757857106">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="624951649834634" type="System">
+                            <param id="0" name="Variable">isSiteLocked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="517168211202493" type="System">
+                            <param id="0" name="Group name">&quot;Site Lock&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="684942106480594" type="System">
+                            <param id="0" name="Group name">&quot;Loader&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="841695563163480" type="System">
+                            <param id="0" name="Layer">&quot;Coolmath&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="432003140695418">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="435302375302116" type="System">
+                            <param id="0" name="Variable">isSiteLocked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="179622180618842" type="System">
+                            <param id="0" name="Group name">&quot;Site Lock&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="805840832972840" type="System">
+                            <param id="0" name="Group name">&quot;Loader&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="358412721401306" type="System">
+                            <param id="0" name="Layer">&quot;Coolmath&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="628735175939603">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="529621892021841">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Site Lock mode: activate &quot;Site Lock&quot; group, deactivate &quot;Loader&quot; group</comment>
+        <event-group description="" inactive="1" sid="987464049275701" title="Site Lock">
+            <sub-events>
+                <event-block sid="731517875397069">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block any="1" sid="805038539252474">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="636524057412237" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;www.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="949061986160798" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;edit.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="914561419521919" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;dev.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="405334432536822" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;www.stage.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="849917234762010" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;edit-stage.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="197747713187109" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;dev.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="767620993893709" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m.coolmath-games.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="829943001903349" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;www.thesheepsmeow.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="520846893954676" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;www.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="950359650842469" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="189021843160221" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;stage.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="510528046629776" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m-stage.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="519566518405496" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;dev.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="746479517448138" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m-dev.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="138789728483701" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m.cmatgame.local&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="378165746220646" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;cmatgame.local&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="511795179580354" type="System">
+                            <param id="0" name="Group name">&quot;Loader&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="325073179048615">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="684680832140702" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="829374840157034" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="609877968041135" type="textTitle">
+                            <param id="0" name="Text">&quot;SITE LOCKED&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="726099050572763" type="System">
+                            <param id="0" name="Seconds">1.25</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="951751241573267" type="bgSheeps" />
+                        <action id="-16" name="Wait" sid="262931903595289" type="System">
+                            <param id="0" name="Seconds">1.25</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="127464776153613" type="System" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="689917621867301">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="665396326529206" type="Keyboard">
+                            <param id="0" name="Key">191</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="798202779832868" type="Touch">
+                            <param id="0" name="Object">loaderProgress</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="140139342116114" type="textTitle">
+                            <param id="0" name="Text">Browser.Domain</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Normal mode: deactivate &quot;Site Lock&quot; group, activate &quot;Loader&quot; group</comment>
+        <event-group description="" sid="516160108613635" title="Loader">
+            <sub-events>
+                <event-block sid="103753842012841">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="997119374898946" type="System">
+                            <param id="0" name="Variable">isSiteLocked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="256593197364275" type="System">
+                            <param id="0" name="First value">loadingprogress</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0.99</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="234944880688028" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="335380095981877" type="bgSheeps" />
+                        <action id="-16" name="Wait" sid="292726313857472" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="295448087550777" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="777950828995658">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="589255553106678" type="System">
+                            <param id="0" name="Variable">isSiteLocked</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="554115694766249" type="System">
+                            <param id="0" name="First value">loadingprogress</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0.99</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="898655272690180" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="627945398639534" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="633839378871431" type="bgSheeps" />
+                        <action id="-16" name="Wait" sid="892192334723266" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="995303988070047" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="436244886439256">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="301089191766372" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="897364620094735" type="loaderProgress">
+                            <param id="0" name="Width">lerp(loaderProgress.Width, 250 * loadingprogress, 0.05)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="551091972461461" type="textDebug">
+                            <param id="0" name="Text">loadingprogress</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

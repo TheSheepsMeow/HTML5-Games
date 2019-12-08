@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Music</name>
+    <events>
+        <event-group description="" sid="984783044724480" title="Music">
+            <sub-events>
+                <event-block sid="462719889987039">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="705492103783565" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="789444137804594" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="903351621182610" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="239269344816765" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="478712372692259" type="Audio">
+                            <param id="0" name="Audio file">1_Ascend music (before shots being introduced)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="518489607545275">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="875962227319874" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="635963591822265" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="509964017732628" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="565713329021287" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="264937729398324" type="Audio">
+                            <param id="0" name="Audio file">2_Ascend music (when shots are introduced)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442225610412764">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="124242137013175" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="434546322257204" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="272662296760178" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="986841798080781" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="760786055064627" type="Audio">
+                            <param id="0" name="Audio file">3_Ascend music (with Hi Hat)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248682017254100">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="675862367158821" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="111642897042501" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="998772478319317" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="976318053936647" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="397412696183192" type="Audio">
+                            <param id="0" name="Audio file">4_Ascend music (with almost all instruments)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831906682941128">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="291326322481487" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="217286908125565" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="496361617803367" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="216511766186872" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="105230034819906" type="Audio">
+                            <param id="0" name="Audio file">5_Ascend music (complete)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="729589092055217">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="511794569090182" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="176005892385479" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="277569206273619" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="948609166503761" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="821756515776389" type="Audio">
+                            <param id="0" name="Audio file">6_Ascend music final (with solo)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

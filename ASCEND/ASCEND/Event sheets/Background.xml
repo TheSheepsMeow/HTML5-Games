@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Background</name>
+    <events>
+        <event-group description="" sid="203244752094152" title="Background">
+            <sub-events>
+                <event-block sid="522748611924586">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="910464202866287" type="bgParticles" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="233843733132926" type="bgParticles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="410037201738183">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="640161055052665" type="bgParticles">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+480</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="778257612395454" type="bgParticles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="920805872689844">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="782484041039408" type="bgParticles" />
+                        <condition id="-2" name="Compare Y" sid="259167635787141" type="bgParticles">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player.Y + 480</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="971177841151749" type="bgParticles">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="543475428651816" type="bgParticles">
+                            <param id="0" name="Rate">25 + Level*4</param>
+                        </action>
+                        <action id="14" name="Set gravity" sid="648896839441036" type="bgParticles">
+                            <param id="0" name="Gravity">-8 * Level</param>
+                        </action>
+                        <action id="18" name="Set timeout" sid="688305866131029" type="bgParticles">
+                            <param id="0" name="Timeout">5+Level/3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="238563722409237">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="476491254856235" type="System" />
+                        <condition id="0" name="On collision with another object" sid="626128650638474" type="Player">
+                            <param id="0" name="Object">levelTriggers</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-34" name="Set layer background color" sid="729326139431260" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(85-(10*World)-(2*Level),85-(10*World)-(2*Level),85-(10*World)-(2*Level))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="203345648295097">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

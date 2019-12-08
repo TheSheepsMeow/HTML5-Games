@@ -1,0 +1,1189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Bamboo Jumper</name>
+    <description></description>
+    <version>0.6</version>
+    <author>The Sheep&apos;s Meow</author>
+    <author-email>games@thesheepsmeow.com</author-email>
+    <author-website>http://www.thesheepsmeow.com/html5</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1vxx6ibujw10n</unique-id>
+    <saved-with-version>25900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loader</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="jumper" sid="378139936149738">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921624534360339" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.472" y="0.472" />
+                            <point x="0.5" y="0.452" />
+                            <point x="0.54" y="0.46" />
+                            <point x="0.54" y="0.5" />
+                            <point x="0.52" y="0.52" />
+                            <point x="0.48" y="0.52" />
+                            <point x="0.472" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Coconut" sid="416041918985278">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="193856000422434">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="217574750561958">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="711159043974691">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914997628842600" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\brian\Downloads\Coconut.png">
+                        <collision-poly>
+                            <point x="0.201613" y="0.213675" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.830645" y="0.179487" />
+                            <point x="0.943548" y="0.495726" />
+                            <point x="0.806452" y="0.794872" />
+                            <point x="0.5" y="0.948718" />
+                            <point x="0.153226" y="0.837607" />
+                            <point x="0.0403226" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="508676449141733">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite4" sid="484570799012297">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="597536904022189" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles2" sid="891305132076461">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="destroyer" sid="783632780153317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336433448460590" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-2.23077" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="582414800987953">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="428583735456562">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="StartButton" sid="116895809058886">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite3" sid="911015447699086">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811953087340304" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="222681021157072">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TiledBackground" sid="722704917348623">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="disroy" sid="902827884751871" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\brian\Downloads\Sky1.png" />
+        </object-type>
+        <object-type name="Spawnerleft" sid="342218607284786">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Timer" sid="162237546919089">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542417718945612" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnerMid" sid="903381472177509">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Timer" sid="189783236520227">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158784532887472" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpawnerRight" sid="723898276975330">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Timer" sid="297813524531748">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633427528011092" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="669165047931100">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Audio" sid="175540542969372">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Fademenu" sid="166363251612571">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="962838637019401">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599147265472068" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FadeBlack" sid="975515153741944">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="427418085063139">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725883263945994" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player" sid="400733465968789">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="596014297938355">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="302259558933394" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rester" sid="773720416493516">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="557914081394306" speed="5">
+                    <frame duration="1" hotspotX="0.496032" hotspotY="0.358974" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rester2" sid="167214662357763">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708918777712619" speed="5">
+                    <frame duration="1" hotspotX="0.496032" hotspotY="0.358974" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="721488451756221">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="disroy" sid="234711330931508" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\brian\Downloads\Sky2.png" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="779915131444249">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="disroy" sid="616066259012261" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\brian\Downloads\Sky3.png" />
+        </object-type>
+        <object-type name="TiledBackground4" sid="796088165915921">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="disroy" sid="936580942755651" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\brian\Downloads\Sky4.png" />
+        </object-type>
+        <object-type name="TiledBackground5" sid="956242330856663">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="disroy" sid="526431433000073" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\brian\Downloads\Sky4.png" />
+        </object-type>
+        <object-type name="BambooL" sid="970266135392788">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="792367448326504">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="296886301977964">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="321757315681925" speed="0">
+                    <frame duration="1" hotspotX="0.609375" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\Bamboo1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BambooM" sid="743844031943974">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="601795710912063">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="737588833828371">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668973296828295" speed="0">
+                    <frame duration="1" hotspotX="0.609375" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BambooR" sid="641557843396176">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="266878934335616">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="981458300189622">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865569548397465" speed="0">
+                    <frame duration="1" hotspotX="0.609375" hotspotY="0.5" original-source="C:\MEOW\Bamboo-Jumper\ART\Bamboo1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerAnimations" sid="347544857255870">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="984986891049116">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="673457166708952">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="197401602177848">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="590087330861334" speed="15">
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.52381" y="0.326797" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.607843" />
+                            <point x="0" y="0.607842" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.501672">
+                        <image-point name="Imagepoint 1" x="0.52381" y="0.301003" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.622074" />
+                            <point x="0" y="0.622074" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.519231" y="0.265957" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.659574" />
+                            <point x="0" y="0.659574" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.528846" y="0.257246" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.615942" />
+                            <point x="0" y="0.615942" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Lose" pingpong="0" repeatcount="1" repeatto="0" sid="967806129441478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\RedPandaLOSE.png">
+                        <collision-poly>
+                            <point x="0.286667" y="0.127976" />
+                            <point x="0.5" y="0.133929" />
+                            <point x="0.666667" y="0.14881" />
+                            <point x="0.7" y="0.5" />
+                            <point x="0.273333" y="0.675595" />
+                            <point x="0.5" y="0.72619" />
+                            <point x="0.56" y="0.75" />
+                            <point x="0.0733333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LocalStorage" sid="301637807910117">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="Function" sid="943780029660287">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="BambooMG" sid="948018632759021">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729061721747264" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.493606" original-source="D:\MEOW\Bamboo-Jumper\ART\BGBamboo1.png">
+                        <collision-poly>
+                            <point x="0.396739" y="0.186701" />
+                            <point x="0.5" y="0.0971867" />
+                            <point x="0.608696" y="0.184143" />
+                            <point x="0.61413" y="0.818414" />
+                            <point x="0.5" y="0.88491" />
+                            <point x="0.391304" y="0.815857" />
+                            <point x="0.380435" y="0.498721" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.51087" hotspotY="0.496164" original-source="D:\MEOW\Bamboo-Jumper\ART\BGBamboo2.png" />
+                    <frame duration="1" hotspotX="0.554348" hotspotY="0.493606" original-source="D:\MEOW\Bamboo-Jumper\ART\BGBamboo3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Star" sid="759847819679865">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="229624480529225">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="354319847520623" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\Star1.png">
+                        <collision-poly>
+                            <point x="0.361111" y="0.361111" />
+                            <point x="0.5" y="0.222222" />
+                            <point x="0.638889" y="0.361111" />
+                            <point x="0.805556" y="0.5" />
+                            <point x="0.722222" y="0.722222" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.277778" y="0.722222" />
+                            <point x="0.194444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\Star2.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.333333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.666667" y="0.333333" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.694444" y="0.694444" />
+                            <point x="0.5" y="0.777778" />
+                            <point x="0.305556" y="0.694444" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tiledBG" sid="635840796226911">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="textDebug" sid="686592129801032">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="titleBG" sid="490266204278894">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="muteButton" sid="162955536160538">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="unmuted" pingpong="0" repeatcount="1" repeatto="0" sid="549091076838653" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Mute.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="muted" pingpong="0" repeatcount="1" repeatto="0" sid="519215751899061" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\MutePressed.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menuButton" sid="752548588137864">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="143151990702051">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647432433465063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Play_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Play_02.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="518466975869806" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\PlayPRESSED_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\PlayPRESSED_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textTitle" sid="984472020130465">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="textScore" sid="362961154217081">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="textTitle2" sid="550943831463860">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="menuButtonReset" sid="857041471728798">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720277047736077" speed="0">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.511628" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\resetScore_01.png" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.511628" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\resetScore_02.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="373673108079290" speed="10">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.511628" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Confirm_01.png" />
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.511628" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Confirm_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textResetScores" sid="457371720006860">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="thesheepsmeow" sid="648072374026460">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396894590003623" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="617572169253668">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="loaderProgress" sid="835070109425721">
+            <plugin id="NinePatch" />
+            <texture original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Load\LoadBar.png" />
+        </object-type>
+        <object-type name="bgSheeps" sid="492583075256073">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Pitchfork\Desktop\tilinesheeps.png" />
+        </object-type>
+        <object-type name="homeButton" sid="463021455981595">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256999334944037" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\homesmall.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="780321682038472" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="restartButton" sid="927005235489082">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604874290752584" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\Retry_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\Retry_02.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="388702542889095" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\RetryPressed_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\RetryPressed_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="endBG" sid="842708177513419">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="titleButton" sid="833225027091761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162778990313781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\Home_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\Home_02.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="248589786118956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\HomePressed_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\HomePressed_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerAbility" sid="866149125627370">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="605365322188664">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523983260928405" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PandaFall" sid="504683378479576">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="431039276350415">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757707271031411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\PandaFall1.png">
+                        <image-point name="Imagepoint 1" x="0.777174" y="0.395161" />
+                        <image-point name="Imagepoint 2" x="0.86413" y="0.475806" />
+                        <collision-poly>
+                            <point x="0.320652" y="0.475806" />
+                            <point x="0.5" y="0.233871" />
+                            <point x="0.777174" y="0.330645" />
+                            <point x="0.945652" y="0.5" />
+                            <point x="0.842391" y="0.766129" />
+                            <point x="0.5" y="0.951613" />
+                            <point x="0.211957" y="0.685484" />
+                            <point x="0.0597826" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\End\PandaFall2.png">
+                        <image-point name="Imagepoint 1" x="0.788043" y="0.387097" />
+                        <image-point name="Imagepoint 2" x="0.875" y="0.467742" />
+                        <collision-poly>
+                            <point x="0.336957" y="0.5" />
+                            <point x="0.5" y="0.217742" />
+                            <point x="0.782609" y="0.322581" />
+                            <point x="0.940217" y="0.5" />
+                            <point x="0.842391" y="0.766129" />
+                            <point x="0.5" y="0.951613" />
+                            <point x="0.157609" y="0.766129" />
+                            <point x="0.0434783" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\PandaFall2.png">
+                        <image-point name="Imagepoint 1" x="0.777174" y="0.41129" />
+                        <image-point name="Imagepoint 2" x="0.869565" y="0.483871" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\PandaFall1.png">
+                        <image-point name="Imagepoint 1" x="0.793478" y="0.379032" />
+                        <image-point name="Imagepoint 2" x="0.875" y="0.467742" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title_Sign" sid="267755148171733">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814758311059476" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Title_Sign.png">
+                        <collision-poly>
+                            <point x="0.196875" y="0.13125" />
+                            <point x="0.5" y="0.208333" />
+                            <point x="0.8" y="0.133333" />
+                            <point x="0.896875" y="0.5" />
+                            <point x="0.621875" y="0.747917" />
+                            <point x="0.5" y="0.579167" />
+                            <point x="0.371875" y="0.752083" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title" sid="383108355741150">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442853527905379" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Title.png">
+                        <collision-poly>
+                            <point x="0.064" y="0.106667" />
+                            <point x="0.912" y="0.146667" />
+                            <point x="0.236" y="0.5" />
+                            <point x="0.868" y="0.78" />
+                            <point x="0.5" y="0.94" />
+                            <point x="0.104" y="0.826667" />
+                            <point x="0.12" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title_Tail" sid="768792736166780">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="994285121906577">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633529243582816" speed="5">
+                    <frame duration="1" hotspotX="0.285714" hotspotY="0.370968" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Title_Tail.png">
+                        <collision-poly>
+                            <point x="0.190476" y="0.322581" />
+                            <point x="0.495238" y="0.322581" />
+                            <point x="0.714286" y="0.483871" />
+                            <point x="0.771429" y="0.5" />
+                            <point x="0.828571" y="0.709677" />
+                            <point x="0.495238" y="0.725806" />
+                            <point x="0.238095" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarLeft" sid="423495575567572">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="702583882870933">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="770843186152613">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869983814802246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\EarLeft.png">
+                        <collision-poly>
+                            <point x="0.321429" y="0.272727" />
+                            <point x="0.5" y="0.242424" />
+                            <point x="0.678571" y="0.272727" />
+                            <point x="0.642857" y="0.484848" />
+                            <point x="0.5" y="0.575758" />
+                            <point x="0.5" y="0.575758" />
+                            <point x="0.321429" y="0.727273" />
+                            <point x="0.178571" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarRight" sid="861321588312359">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="598565366754390">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="424977191252328">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524041001245850" speed="5">
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.515152" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\EarRight.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.272727" />
+                            <point x="0.481481" y="0.242424" />
+                            <point x="0.666667" y="0.272727" />
+                            <point x="0.851852" y="0.484848" />
+                            <point x="0.407407" y="0.515152" />
+                            <point x="0.481481" y="0.575758" />
+                            <point x="0.518519" y="0.575758" />
+                            <point x="0.37037" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MoreGames_Button" sid="625862315601934">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631899077455606" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\MoreGames_Button.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title_BG" sid="529904727571773">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140207749019273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Title\Title_BG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBar_Back" sid="155770448503484">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481644973233267" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Load\LoadBar_Back.png">
+                        <collision-poly>
+                            <point x="0.075" y="0.393443" />
+                            <point x="0.5" y="0.327869" />
+                            <point x="0.928125" y="0.377049" />
+                            <point x="0.934375" y="0.491803" />
+                            <point x="0.93125" y="0.639344" />
+                            <point x="0.5" y="0.672131" />
+                            <point x="0.075" y="0.606557" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBar_Outside" sid="508523683316191">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956278752751235" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Load\LoadBar_Outside.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.163934" />
+                            <point x="0.5" y="0.114754" />
+                            <point x="0.971875" y="0.147541" />
+                            <point x="0.971875" y="0.852459" />
+                            <point x="0.5" y="0.885246" />
+                            <point x="0.03125" y="0.836066" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBar_Top" sid="739319051768390">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754206785418802" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Load\LoadBar_Top.png">
+                        <collision-poly>
+                            <point x="0.071875" y="0.377049" />
+                            <point x="0.5" y="0.311475" />
+                            <point x="0.93125" y="0.360656" />
+                            <point x="0.93125" y="0.639344" />
+                            <point x="0.5" y="0.688525" />
+                            <point x="0.071875" y="0.622951" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Load_BG" sid="809040891175629">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810706940848142" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Load\Load_BG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pause" sid="711568388086562">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341086052059504" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Game\Pause.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.015625" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.015625" y="0.984375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\Final_Menus\Game\PausePressed.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.015625" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.015625" y="0.984375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FadeStart" sid="441750688344543">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="959456136103400">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898559496484785" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="berryBig" sid="622165670011128">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="114620897949156">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="931443731716915">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="590608077527923">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591472127923369" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\Cherry.png">
+                        <collision-poly>
+                            <point x="0.201613" y="0.213675" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.830645" y="0.179487" />
+                            <point x="0.943548" y="0.495726" />
+                            <point x="0.806452" y="0.794872" />
+                            <point x="0.5" y="0.948718" />
+                            <point x="0.153226" y="0.837607" />
+                            <point x="0.0403226" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="berrySmall" sid="864623605577282">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="302686250636576">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="484995374250314">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="320197282020811">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424974252668391" speed="5">
+                    <frame duration="1" hotspotX="0.503448" hotspotY="0.505376" original-source="D:\MEOW\Bamboo-Jumper\ART\Pineapple.png">
+                        <collision-poly>
+                            <point x="0.201613" y="0.213675" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.830645" y="0.179487" />
+                            <point x="0.943548" y="0.495726" />
+                            <point x="0.806452" y="0.794872" />
+                            <point x="0.5" y="0.948718" />
+                            <point x="0.153226" y="0.837607" />
+                            <point x="0.0403226" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="scoreBG" sid="625882887327829">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="498352082327130" speed="10">
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                </animation>
+                <animation framecount="4" loop="1" name="Record" pingpong="0" repeatcount="1" repeatto="0" sid="112440854765258" speed="10">
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Star2" sid="119276173268735">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="509159997694868">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="798305756504230" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\galaxy1.png">
+                        <collision-poly>
+                            <point x="0.361111" y="0.361111" />
+                            <point x="0.5" y="0.222222" />
+                            <point x="0.638889" y="0.361111" />
+                            <point x="0.805556" y="0.5" />
+                            <point x="0.722222" y="0.722222" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.277778" y="0.722222" />
+                            <point x="0.194444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Star3" sid="571562173457451">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="910988592772981">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194484933391675" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\galaxy2.png">
+                        <collision-poly>
+                            <point x="0.361111" y="0.361111" />
+                            <point x="0.5" y="0.222222" />
+                            <point x="0.638889" y="0.361111" />
+                            <point x="0.805556" y="0.5" />
+                            <point x="0.722222" y="0.722222" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.277778" y="0.722222" />
+                            <point x="0.194444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Panda_Tear" sid="445122775960391">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="974637217406240">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796420426268361" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\Bamboo-Jumper\ART\Panda_Tear.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="plus1" sid="972669432161419">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="931517601828181">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="plus2" sid="177465964359410">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="286184928206641">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Bamboo" plugin-id="Sprite" sid="731006511892791">
+            <members>
+                <member>BambooL</member>
+                <member>BambooM</member>
+                <member>BambooR</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Bullet" sid="553979903320379">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Backgrounds" plugin-id="TiledBg" sid="302249010073190">
+            <members>
+                <member>TiledBackground</member>
+                <member>TiledBackground2</member>
+                <member>TiledBackground3</member>
+                <member>TiledBackground4</member>
+                <member>TiledBackground5</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="843677834915094">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Fade2" sid="905606227250830">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Stars" plugin-id="Sprite" sid="563862529028236">
+            <members>
+                <member>Star</member>
+                <member>Star2</member>
+                <member>Star3</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="426302031003737">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Game.xml</layout>
+        <layout>Storage.xml</layout>
+        <layout>Title.xml</layout>
+        <layout>Loader.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>Title.xml</event-sheet>
+        <event-sheet>Game Over Event.xml</event-sheet>
+        <event-sheet>LocalStorage.xml</event-sheet>
+        <event-sheet>Loader.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="24" />
+        <global-instance type="Touch" uid="25">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="35">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="10" />
+        <global-instance type="Function" uid="11" />
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder>
+        <file name="Leftbamboo.m4a" />
+        <file name="Leftbamboo.ogg" />
+        <file name="Midbamboo.m4a" />
+        <file name="Midbamboo.ogg" />
+        <file name="Rightbamboo.m4a" />
+        <file name="Rightbamboo.ogg" />
+        <file name="StartButtonClick.m4a" />
+        <file name="StartButtonClick.ogg" />
+        <file name="DeathSound.m4a" />
+        <file name="DeathSound.ogg" />
+        <file name="Cherry Pickup sound.m4a" />
+        <file name="Cherry Pickup sound.ogg" />
+        <file name="Coconut hit 2.m4a" />
+        <file name="Coconut hit 2.ogg" />
+        <file name="Coconut hit.m4a" />
+        <file name="Coconut hit.ogg" />
+        <file name="Hitting Coconut (No Rever.m4a" />
+        <file name="Hitting Coconut (No Rever.ogg" />
+        <file name="Hitting Coconut.m4a" />
+        <file name="Hitting Coconut.ogg" />
+        <file name="Jumping Cut.m4a" />
+        <file name="Jumping Cut.ogg" />
+        <file name="Jumping.m4a" />
+        <file name="Jumping.ogg" />
+        <file name="Pinnapple pickup sound.m4a" />
+        <file name="Pinnapple pickup sound.ogg" />
+        <file name="Running Sound.m4a" />
+        <file name="Running Sound.ogg" />
+        <file name="Shiled defliction.m4a" />
+        <file name="Shiled defliction.ogg" />
+        <file name="Squish Bug Sound (Reverb).m4a" />
+        <file name="Squish Bug Sound (Reverb).ogg" />
+        <file name="Squish Bug Sound.m4a" />
+        <file name="Squish Bug Sound.ogg" />
+        <file name="Bamboo Jumper gamplay BGM edit.m4a" />
+        <file name="Bamboo Jumper gamplay BGM edit.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

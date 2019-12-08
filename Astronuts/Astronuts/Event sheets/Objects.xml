@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Objects</name>
+    <events>
+        <include>Controls</include>
+        <event-group description="" sid="340887233158707" title="Platforms">
+            <sub-events>
+                <comment>prevents player from getting stuck in the floor</comment>
+                <event-block sid="816310409103254">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="451560857868065" type="player">
+                            <param id="0" name="Object">SpaceCloudPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="679946627973858" type="player">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">60*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172147562907282">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>This spawns the platform.</comment>
+                <event-block sid="748962919807294">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="158073302008832" type="player">
+                            <param id="0" name="Object">collectForPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="993727587573936" type="Audio">
+                            <param id="0" name="Audio file">Platform Appear1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="790760463597002" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="692403108353755" type="System">
+                            <param id="0" name="Object to create">MetalPlatform</param>
+                            <param id="1" name="Layer">player.LayerName</param>
+                            <param id="2" name="X">collectForPlatform.X</param>
+                            <param id="3" name="Y">collectForPlatform.Y+25</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="728209026888389" type="collectForPlatform">
+                            <param id="0" name="Object">collectParticle</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="742749322953664" type="collectForPlatform" />
+                    </actions>
+                </event-block>
+                <event-block sid="104275307714491">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="787974250388682" type="player">
+                            <param id="0" name="Object">MetalPlatform</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="438823206174561" type="player">
+                            <param id="0" name="Y">player.Y-15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="108745872024127">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="304943766134461" type="MetalPlatform" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="153394558672574" type="MetalPlatform">
+                            <param id="0" name="Object">MetalPlatformParticles</param>
+                            <param id="1" name="Layer">MetalPlatform.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="794595755082198" title="Bubbles">
+            <sub-events>
+                <event-block sid="461261926484805">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="460925052650025" type="player">
+                            <param id="0" name="Object">acornBubble</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="551846447832188" type="acornBubble" />
+                        <action id="0" name="Play" sid="603880104300949" type="Audio">
+                            <param id="0" name="Audio file">Bubble Pop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="175595731716188">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="423484794226194" title="Space Acorns">
+            <sub-events>
+                <event-block sid="738781452401758">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="649648191721633">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="607814254523306" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="993709634841863" type="SpaceAcorn">
+                            <param id="0" name="Object">acornBubble</param>
+                            <param id="1" name="Layer">SpaceAcorn.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="421039690070401" type="acornBubble">
+                            <param id="0" name="Scale">0.85</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>space acorns</comment>
+                <event-block sid="381189337170656">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="936914774295323" type="player">
+                            <param id="0" name="Object">SpaceAcorn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="151191487583905" type="System">
+                            <param id="0" name="Variable">levelScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="762908156449756" type="SpaceAcorn">
+                            <param id="0" name="Object">collectParticle</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="635757238478184" type="SpaceAcorn" />
+                        <action disabled="1" id="0" name="Play" sid="186912041045912" type="Audio">
+                            <param id="0" name="Audio file">Collect Little Acorn1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="552444810019211" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;astro_nut&quot; &amp; levelScore</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-20</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="748433824911312">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="497526860076952">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="583926201538967" title="Golden Acorns">
+            <sub-events>
+                <event-block sid="737097676750128">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="151059413801851">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="839172260472632" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="485797726848557" type="GoldenAcorn">
+                            <param id="0" name="Object">acornBubble</param>
+                            <param id="1" name="Layer">GoldenAcorn.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="239031989103839" type="acornBubble">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="226085009514364" type="acornBubble">
+                            <param id="0" name="Pin to">GoldenAcorn</param>
+                            <param id="1" name="Mode">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>golden acorn</comment>
+                <comment>This triggers deathFromAbove to start moving down.</comment>
+                <event-block sid="883118886335270">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="504894558681136" type="player">
+                            <param id="0" name="Object">GoldenAcorn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="570232528011435" type="System">
+                            <param id="0" name="Variable">levelScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="464693561189652" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Collect Big Acorn&quot; &amp; str(choose(1,2))</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-20</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="372883586529545" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;astro_nut&quot; &amp; levelScore</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-5</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="291294888979546" type="deathFromBelow" />
+                        <action id="-13" name="Set boolean" sid="882696085896025" type="catHeadBody">
+                            <param id="0" name="Instance variable">moving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="484623116188451" type="catPawLeft">
+                            <param id="0" name="Instance variable">moving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="819859875043496" type="catPawRight">
+                            <param id="0" name="Instance variable">moving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="993359298637391" type="GoldenAcorn" />
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="519801478502691" type="camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="515201305983577" type="floorGoal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="130580844269733" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(choose(57, 58, 59, 60, 61) &amp; &quot; Siamese&quot;, choose(63, 64, 65, 66, 67) &amp; &quot; Burmese&quot;) &amp; &quot;, Individual Meows&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741366785651928">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="242086403241551" title="Trampolines">
+            <sub-events>
+                <event-block sid="565225691002489">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="365238249907754">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="261693826945345" type="player">
+                            <param id="0" name="Object">trampoline</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="975401929919656" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="311583677391999" type="player">
+                            <param id="0" name="Vector Y">-750</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="596412729618043" type="trampoline">
+                            <param id="0" name="Animation">&quot;Bounce&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="602941625725459" type="Audio">
+                            <param id="0" name="Audio file">Jump4</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="298811518464910">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="899434525312374" type="trampoline">
+                            <param id="0" name="Animation">&quot;Bounce&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="199844890210871" type="trampoline">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="178232852647326">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="533104333581223">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

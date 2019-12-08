@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>End</name>
+    <events>
+        <event-group description="" sid="901824253984590" title="Ending">
+            <sub-events>
+                <event-block sid="762642718565196">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="144478450730367">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="642899331533854" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="937619383125496" type="System">
+                            <param id="0" name="Group name">&quot;Ending Completed&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="654364333031529" type="resetsText">
+                            <param id="0" name="Text">&quot;resets: &quot; &amp; Deaths</param>
+                        </action>
+                        <action id="0" name="Set text" sid="970686946313857" type="Timer">
+                            <param id="0" name="Text">zeropad(floor(Timer/60 % 60), 2) &amp; &quot;:&quot; &amp; zeropad(floor(Timer % 60), 2)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="547930384854171" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="689228497916926" type="System">
+                            <param id="0" name="Group name">&quot;Ending Completed&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="955108377288384" type="System">
+                            <param id="0" name="Layer">&quot;Text&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346244239494752">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="909164729565136" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="881766767131273" type="endingParticles">
+                            <param id="0" name="Object">endingAnimation</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="399030349604282" type="endingParticles">
+                            <param id="0" name="Pin to">endingAnimation</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="587976331680404" type="System">
+                            <param id="0" name="Seconds">2.1</param>
+                        </action>
+                        <action id="0" name="Play" sid="205157241134543" type="Audio">
+                            <param id="0" name="Audio file">die2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="547862602778959" type="Audio">
+                            <param id="0" name="Audio file">shoot2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="544893097936540" type="Audio">
+                            <param id="0" name="Audio file">Jump2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="790434162769613" type="Audio">
+                            <param id="0" name="Audio file">levelchange2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="727162787691246" type="Audio">
+                            <param id="0" name="Audio file">levelComplete2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set spraying" sid="299958677515469" type="endingParticles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="579438167795842" type="transformFade">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="566836917075841" type="transformFade" />
+                        <action disabled="1" id="-16" name="Wait" sid="449781468022964" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="625424250372042" type="endingAnimation">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="131549443352852">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Is spraying" sid="845481412311898" type="endingParticles" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="258027631629428" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Set spraying" sid="102859712307467" type="endingParticles">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="808117409534415" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set spraying" sid="440175955810965" type="endingParticles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="371846609437111">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="355958833142869">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="389155656796059" type="endingAnimation">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="807486265670610" type="endingAnimation">
+                            <param id="0" name="Y">lerp(endingAnimation.Y, 150, 0.025)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="448770175947816">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="781829304201358" type="endingAnimation">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">155</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="638572085467408">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="704414232679296" title="Ending Completed">
+            <sub-events>
+                <event-block sid="194601860239804">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="934114153878275">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="682184090286975">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="786055539354781" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="943566485576503" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="142514682655005" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="746047055704947">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="316068548266153">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

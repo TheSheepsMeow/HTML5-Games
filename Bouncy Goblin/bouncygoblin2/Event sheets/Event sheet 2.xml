@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <include>Event sheet 1</include>
+        <event-block disabled="1" sid="503624308770908">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="465672542645301" type="System" />
+                <condition id="-14" name="Compare variable" sid="187733531673581" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">topscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="869126109646043" type="System">
+                    <param id="0" name="Variable">topscore</param>
+                    <param id="1" name="Value">points</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="748393825411819">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="389688435150974" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="482320684992422" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="908824356264285" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="0" name="Play" sid="558530515760820" type="Audio">
+                    <param id="0" name="Audio file">BouncyGoblinMainv1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691316847657400">
+            <conditions>
+                <condition id="3" name="On touched object" sid="727195411365805" type="Touch">
+                    <param id="0" name="Object">start</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="428553141094588" type="start" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-2" name="Go to layout" sid="634203331752192" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+                <action id="-9" name="Set value" sid="113011376908658" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="348109075950536" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="626855611593825" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="171186904901739" type="start">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="146419511603331" type="title">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="670257795661824" type="mainMenue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="115472222662162" type="HIscore">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="229988738959863" type="topscore">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="767238328880858">
+            <conditions>
+                <condition id="3" name="On touched object" sid="863387740142783" type="Touch">
+                    <param id="0" name="Object">mainMenue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="974349938005995" type="mainMenue" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-2" name="Go to layout" sid="644957193540262" type="System">
+                    <param id="0" name="Layout">start</param>
+                </action>
+                <action id="0" name="Set text" sid="875481902379294" type="start">
+                    <param id="0" name="Text">&quot;start&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="441842208740562" type="mainMenue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="872136754521827" type="title">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="258224705733184">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="779900663652712" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="182283517889573" type="topscore">
+                    <param id="0" name="Text">topscore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="447216324280931">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="316681234604184" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="966292146547318" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">topscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="393312960887748" type="System">
+                    <param id="0" name="Variable">topscore</param>
+                    <param id="1" name="Value">points</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="883513110052891">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="449479373790559" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-2" name="Go to layout" sid="480369352328138" type="System">
+                    <param id="0" name="Layout">end</param>
+                </action>
+                <action id="-15" name="Set visible" sid="816686872654844" type="start">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="941738310376944" type="start">
+                    <param id="0" name="Text">&quot;restart&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="551465784264568" type="mainMenue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="982039015289099" type="HIscore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="152371714085865" type="topscore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="648340918378600" type="coin" />
+                <action id="-9" name="Destroy" sid="397821557802037" type="BlueGem" />
+                <action id="-9" name="Destroy" sid="864309813382369" type="greenGem" />
+                <action id="-9" name="Destroy" sid="535672024052196" type="purpleGem" />
+                <action id="-9" name="Destroy" sid="464808027677649" type="YellowGem" />
+                <action id="-13" name="Set time scale" sid="968244088722489" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

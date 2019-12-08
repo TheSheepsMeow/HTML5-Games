@@ -1,0 +1,2624 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Hazards</name>
+    <events>
+        <event-group description="" sid="389321255072230" title="Bullets &amp; Deaths">
+            <sub-events>
+                <event-block sid="622079789112247">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="872928368403541" type="Player" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="385244883201230" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="335256453269429">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="992134027050693" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="753333846774969" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="327142559168867" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="709659957432129" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="575892453220649" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="619086485767464" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="374446164446653" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="686011613298621" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="137181876315891" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="573602235195113" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="605566987584118" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="494179232937874" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="368786005280734" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="907385921596497" type="Player">
+                                    <param id="0" name="Object">PlayerStart1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="915341220237542" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578418663677878">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="157578434231527" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="157101590195502" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="397585595459517" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="288955364746601" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="206889402776357" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="614143879259140" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="892612572227133" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="446985053817875" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="947946195557351" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="683871478675394" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="385484538524559" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="639526015102127" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="915613499234415" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="573953623106839" type="Player">
+                                    <param id="0" name="Object">PlayerStart2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="553929261895028" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="475570785046101">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="666236783954590" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="788057901888105" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="114348806394273" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="242058525794627" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="148215757779168" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="129582484621313" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="662436157102081" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="971911067111346" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="215371304557194" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="730382947256292" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="158039466655844" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="247697064270271" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="732037318093927" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="968583182515714" type="Player">
+                                    <param id="0" name="Object">PlayerStart3</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="742306473327049" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="292544236061652">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="585426319432214" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="359645389876338" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="599051870611477" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="818463074284138" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="927059925501496" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="528594469152089" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="236525106310959" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="781713968639428" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="953166106400265" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="624431968876899" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="707230824105723" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="901164191150001" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="492061281865484" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="253292779009243" type="Player">
+                                    <param id="0" name="Object">PlayerStart4</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="589191549605391" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="973489657722783">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="228084131330349" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="624436341448514" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="641472994896904" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="162496220587666" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="176458481929880" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="601339643189247" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="909525299718887" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="730606128691252" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="820465852419575" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="982742989558619" type="RedScreen" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="703124211117919" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="150720220742899" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="945721911174258" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="906285570712110" type="Player">
+                                    <param id="0" name="Object">PlayerStart5</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="768782773102854" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="866224088713331">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="665380491174010" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="658512485312544" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="960540928384376" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="891358320023336" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="289550853821446" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="468827547701868" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="299368425506649" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="643073372524415" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="991301747448168" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="585120503832376" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="424306266950989" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="674337454967078" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="598091584035071" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="964378299018702" type="Player">
+                                    <param id="0" name="Object">PlayerStart6</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="496222652719146" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="176695424082111">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="982783679983188" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="345937821652944" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="444231564770069" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="522378634976704" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="483686019885709" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="562028519719446" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="819810410791346" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="455109644460013" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="168166547456566" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="853884029245337" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="504322935045976" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="529402355248774" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="274047744233817" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="846111050137390" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="961555112823199" type="Player">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="654083241199287" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="739814617365037">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="216380661663645" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="774661491881186" type="System">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="735128926707428" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="814870531268781" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="933003849621529" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="687422860403772" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="280253154953976" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="309310615617084" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="838757299298782" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="203060278454355" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="627660993742122" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="500598172347628" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="371107776646402" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="702919063583432" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="928351187383157" type="Player">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="826640483497714" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="969517416734067">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="191376149216232" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="995182109719755" type="System">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="982517184691294" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="955283642773206" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="121011013685153" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="854602941723209" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="314451649787995" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="725157017272057" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="490715429202986" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="646877246772253" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="225944671008796" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="842128513386205" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="596409725271450" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="128944530459824" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="346336377113901" type="Player">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="374096162754474" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="169917065227135">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="651063989246910" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="726216103146670" type="System">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="915600902023099" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="515254662576069" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="455148245387740" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="167273539894803" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="924304265702958" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="906377745800445" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="465824867989363" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="423536561919252" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="301923552494650" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="862791747706482" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="647627626211596" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="177655920530120" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="458063741378830" type="Player">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="350880249076515" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="119890935027700">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="303702137179713" type="Player">
+                            <param id="0" name="Object">BulletLeft</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="458404702186266" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="324704203828258" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="522746417328630" type="Player">
+                            <param id="0" name="Object">bulletParticles</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="731216169598840" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="942392984374117" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="641908579746422" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="753898104897968" type="Audio">
+                            <param id="0" name="Audio file">die2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="648826953744031" type="System">
+                            <param id="0" name="Variable">Deaths</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="271655206748107" type="RedScreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="928146248722879" type="RedScreen" />
+                        <action id="-13" name="Set boolean" sid="965018794425145" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="660842144972291" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="250298403695485" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="572749874113433">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="328925489133814" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="811585625037262" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="310322796751476" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="432481658706697" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="634428690973418" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="809759242390906" type="Player">
+                                    <param id="0" name="Object">PlayerStart1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="908427952930407" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="511164752484784" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="834215845216476" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="362393159298664" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="579176336291089">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="915167082012329" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="372272847636172" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="363757143174654" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="299349216711524" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="203073800775171" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="218072739766043" type="Player">
+                                    <param id="0" name="Object">PlayerStart2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="629210584048122" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="550287108059851" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="250615418580737" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="532466159540196" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="764619605352440">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="186624874716933" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="389589596996982" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="304132185569362" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="566301945861861" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="745097894947936" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="359549597630446" type="Player">
+                                    <param id="0" name="Object">PlayerStart3</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="851168922504760" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="767640854999730" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="963544348388748" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="491360644931131" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="127165385547194">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="979183988151312" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="552114910524234" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="731323732860424" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="631495756682971" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="408811713555709" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="244517536977562" type="Player">
+                                    <param id="0" name="Object">PlayerStart4</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="728900345098528" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="726320496637945" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="815376243646928" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="603411687876116" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231336384278255">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="777030679826953" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="739099661993830" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="776208841345694" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="695177453563442" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="676047458208633" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="533115628166858" type="Player">
+                                    <param id="0" name="Object">PlayerStart5</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="844720624534204" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="745675065370096" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="192873106233043" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="761596898832249" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="946163784737196">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="530312855987125" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="542112841029197" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="547262898839470" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="594844227338064" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="794470029880049" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="674886824257096" type="Player">
+                                    <param id="0" name="Object">PlayerStart6</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="818587057237872" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="742715654887743" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="941402455185236" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="879357276227173" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="544153951352992">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="940273460995262" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="621965846945704" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="460654524207080" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="532161224030064" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="710896635926400" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="530872802631135" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="118232917696554" type="Player">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="734695618455775" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="694823725816254" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="848009046416620" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="477281505838050" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="758040079638171">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="270203407835560" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="910487139055434" type="System">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="383570368084274" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="330773754378767" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="999452862789835" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="428584800768385" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="307405329601356" type="Player">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="927893591898488" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="754393789972096" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="429344172831067" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="277277945273260" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="881009100351172">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="289572325742877" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="722544936121696" type="System">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="951158805183457" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="777406617346448" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="249597286505168" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="360894967020541" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="332520142157096" type="Player">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="566540715187389" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="860810419984729" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="745327222914572" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="866019606942113" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690323773847092">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="964259406085495" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="483201024212153" type="System">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="215591570633865" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="806316734123773" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="779152705184046" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="393044939709327" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="889906547749417" type="Player">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="747929931692519" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="101436964367205" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="844716487828597" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="235716712225558" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="239585489740996">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="848000304710917" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="557824383916537" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="214471560597399" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="315274739315819" type="Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="298271851712113">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="272512112667741" type="Player">
+                            <param id="0" name="Object">BulletRight</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="854368292957877" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="435591534237011" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="438375520010733" type="Player">
+                            <param id="0" name="Object">bulletParticles</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="786272036226533" type="Camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="682122472240690" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="314803855517593" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="589508983804798" type="Audio">
+                            <param id="0" name="Audio file">die2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="287764725311490" type="System">
+                            <param id="0" name="Variable">Deaths</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="976263065093668" type="RedScreen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="144261912996035" type="RedScreen" />
+                        <action id="-13" name="Set boolean" sid="190226439123195" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="203417890099580" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="376156852524205" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="615746341054143">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="519074117402141" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="776825200991416" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="525187330814962" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="590491711162377" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="705586490529909" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="870159955200607" type="Player">
+                                    <param id="0" name="Object">PlayerStart1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="817507135024330" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="428615670353108" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="768630107361611" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="457567560395454" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859478547887016">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="584353410510758" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="401718283172045" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="719994894468731" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="663585077091057" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="943687374026636" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="874234735908655" type="Player">
+                                    <param id="0" name="Object">PlayerStart2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="381695253319698" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="950359559194176" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="796320019098392" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="491650625111993" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="532874173979777">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="578321983607265" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="383478410052153" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="125669001968995" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="607154419768641" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="136779150695897" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="515396076302143" type="Player">
+                                    <param id="0" name="Object">PlayerStart3</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="919080182971956" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="141616263557968" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="406246984226363" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="269142840012764" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="549660710192675">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="645127717077528" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="840002227174165" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="196176431634043" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="315368633305381" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="570298884686706" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="241405497033612" type="Player">
+                                    <param id="0" name="Object">PlayerStart4</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="138369636483238" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="824677017245895" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="292089626052489" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="931747510301411" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115461057443181">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="310161301088469" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="292746625767796" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="311943600461565" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="891283618765899" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="985496610095576" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="464954056115353" type="Player">
+                                    <param id="0" name="Object">PlayerStart5</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="522707298283406" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="749545027605050" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="913722941539390" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="409443881829612" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="869943636042456">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="704875093144199" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="985605774241222" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="781960894756099" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="604415825734354" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="521512280743902" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="826339191664039" type="Player">
+                                    <param id="0" name="Object">PlayerStart6</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="973557013361153" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="808625367982433" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="242976915288367" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="879945267462481" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="753993102844908">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="359583984680409" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="952949461625869" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="743698020113438" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="499947348303557" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="807819430799511" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="518200719707820" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="383407928010102" type="Player">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="202727842924314" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="217120451805551" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="347248958573564" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="482479682010114" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="605956242227740">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="520605805100491" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="567356264504848" type="System">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="712581879269282" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="618328277095717" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="200629999368188" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="552114879785843" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="693562126567920" type="Player">
+                                    <param id="0" name="Object">PlayerStart8</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="114120234274113" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="393406541515488" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="182021502366193" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="514276885541123" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281710932506508">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="383925076822610" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="248462281313850" type="System">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="732737538851289" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="679742645167561" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="976703660867651" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="449948981808327" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="994679293612454" type="Player">
+                                    <param id="0" name="Object">PlayerStart9</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="811160722921544" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="359278572289066" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="428087039246430" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="800355328868261" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="778995778884046">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="524218205670970" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="153200378829166" type="System">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="794562052577683" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="936366522437789" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="527245751715063" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="656857490296898" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="868083309321994" type="Player">
+                                    <param id="0" name="Object">PlayerStart10</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="847066405447920" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="122573891662928" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="291229149588396" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="161163406221767" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="416053602417607">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="485115061520711" type="BulletLeft" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="907475205567010" type="BulletLeft" />
+                    </actions>
+                </event-block>
+                <event-block sid="739460444731870">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="804088678353477" type="BulletRight" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="386277803272471" type="BulletRight" />
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="689935636511496">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="866149901536501" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="167834602654804" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="400434775483788">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="990798489403091" type="Player">
+                                    <param id="0" name="Object">SharpObject</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="164251650316504" type="Player">
+                                    <param id="0" name="Object">RedPlatform</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="544098370762884" type="Player">
+                                    <param id="0" name="Object">BulletSpin1</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="465365670260835" type="Player">
+                                    <param id="0" name="Object">BulletSpin2</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="301568832645439" type="Player">
+                                    <param id="0" name="Object">BulletSpin3</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="150066832195507" type="Player">
+                                    <param id="0" name="Object">BulletSpin4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="900213039392578" type="Player">
+                                    <param id="0" name="Object">bulletParticles</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="169930322010996" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="140834945787123" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="517205154496768" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="639921494659918" type="Audio">
+                                    <param id="0" name="Audio file">die2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="534880959452941" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="943372306812821" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="748997461414049" type="RedScreen" />
+                                <action id="-13" name="Set boolean" sid="940837904400131" type="Player">
+                                    <param id="0" name="Instance variable">Dead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="176579666987989" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="997838602248782" type="System">
+                                    <param id="0" name="Variable">TextGoBack</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="952924165432606">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="134055237681078" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="747023166543604" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="885615853283189" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="578142941153704" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="924390194918247" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="614010696383556" type="Player">
+                                            <param id="0" name="Object">PlayerStart1</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="306702887380197" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="588566249742639" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="118772932124916" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="371653812064942" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="299616257091843">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="638509398430396" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="749521361227190" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="384190413025880" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="905413137557988" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="679063792007717" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="397973624871857" type="Player">
+                                            <param id="0" name="Object">PlayerStart2</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="197627083989334" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="110384467723427" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="364901057315446" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="900180515903401" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="562694706212965">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="702200468311328" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="975569533216414" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="690264358320981" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="806030807689091" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="642399341049294" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="833728374941900" type="Player">
+                                            <param id="0" name="Object">PlayerStart3</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="827628757998459" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="319481638547448" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="133521872214217" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="721287441046915" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="908190508711052">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="434758908318407" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="758212676391950" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="620099748740248" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="534478621880720" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="529045824899073" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="705613756087334" type="Player">
+                                            <param id="0" name="Object">PlayerStart4</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="733531791403806" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="569951281000631" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="329277824915356" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="955461266164421" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="596646121556280">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="715825704030515" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="675550347028270" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="886371731040870" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="178667488418891" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="944725840490053" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="447072673874974" type="Player">
+                                            <param id="0" name="Object">PlayerStart5</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="368458430371018" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="168688781067714" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="802432013115595" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="239122656304991" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="897635002787978">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="766684333584826" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="706503747378405" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="830715555755785" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="102902022197478" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="403613320428279" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="428906953217810" type="Player">
+                                            <param id="0" name="Object">PlayerStart6</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="649994654288352" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="107586526697704" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="233303893884378" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="327868450150853" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="395915788018744">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="268083931219208" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="615861425064526" type="System">
+                                            <param id="0" name="Object">PlayerStart7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="969453834050041" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="813748884698798" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="455919466984864" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="424720404824771" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="435399016065571" type="Player">
+                                            <param id="0" name="Object">PlayerStart7</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="646958417461137" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="219352802906106" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="251381771689466" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="150426556940909" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="707863082693199">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="727800310617798" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="447814816450284" type="System">
+                                            <param id="0" name="Object">PlayerStart8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="124745457566596" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="851678124259991" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="762983640214627" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="913064370739473" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="248688183728351" type="Player">
+                                            <param id="0" name="Object">PlayerStart8</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="384857714250004" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="750260184469222" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="147263048871677" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="987440913608819" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="222007495188384">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="613862814728164" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="485242752337643" type="System">
+                                            <param id="0" name="Object">PlayerStart9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="630829262921005" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="255776565785132" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="897412956178529" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="508423409083904" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="790711362062635" type="Player">
+                                            <param id="0" name="Object">PlayerStart9</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="291700084659063" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="226556905385187" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="474324622569653" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="850971318182102" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="837243475305954">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="664691938659780" type="System">
+                                            <param id="0" name="Variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="886502461724198" type="System">
+                                            <param id="0" name="Object">PlayerStart10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="923363163807245" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="334202591484038" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="405630373727581" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="633629786894115" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="278558504353443" type="Player">
+                                            <param id="0" name="Object">PlayerStart10</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="220699963429801" type="Player">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="418753141025256" type="Player">
+                                            <param id="0" name="Instance variable">Dead</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="708584922151969" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="839456162902520" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Dsetroys bullet and creates explosion.</comment>
+                        <event-block sid="434295015939553">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="302968366566414" type="BulletRight">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">295</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="950128917626210" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="961583087820097" type="BulletRight">
+                                    <param id="0" name="Object">BulletExplodeRight</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="855069366153915" type="BulletRight">
+                                    <param id="0" name="Object">bulletParticlesLight</param>
+                                    <param id="1" name="Layer">Self.LayerNumber</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="888179760538696" type="bulletParticlesLight">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="216556144243925" type="BulletRight" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="691484345898866">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="470433344407742" type="BulletLeft">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">295</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="703656969035380" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="385452434008943" type="BulletLeft">
+                                    <param id="0" name="Object">BulletExplodeLeft</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="822980825084126" type="BulletLeft">
+                                    <param id="0" name="Object">bulletParticlesLight</param>
+                                    <param id="1" name="Layer">Self.LayerNumber</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="117350045364434" type="bulletParticlesLight">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="855135472449662" type="BulletLeft" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="152105844474998">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="309348258558185" type="ShootLeft" />
+                        <condition id="-3" name="Is on-screen" sid="737484133741212" type="ShootRight" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="406144665361096">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="766490383945800" type="System">
+                                    <param id="0" name="Interval (seconds)">1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="551841676582364" type="ShootLeft">
+                                    <param id="0" name="Object">BulletLeft</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="818552201789477" type="ShootLeft">
+                                    <param id="0" name="Object">FlashLeft</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="114140861790214" type="ShootRight">
+                                    <param id="0" name="Object">BulletRight</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="877569476208562" type="ShootRight">
+                                    <param id="0" name="Object">FlashRight</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="968447894141976" type="Audio">
+                                    <param id="0" name="Audio file">shoot2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="640449509524265">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="648385635132113" type="ShootLeft">
+                                            <param id="0" name="Speed">3</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="266667643488757" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="162547641474611" type="ShootLeft">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="798797897514281" type="ShootLeft">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="766608572082328">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="190176825361859" type="ShootRight">
+                                            <param id="0" name="Speed">3</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="842843568602755" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="656122591020623" type="ShootRight">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="393288027475211" type="ShootRight">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="594082839370409">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="143870064661273" type="System">
+                                            <param id="0" name="Object">BulletLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="589046833975580" type="BulletLeft">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="545871822215884" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="899247352272120" type="BulletLeft">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="870209414123402">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="603492426784296" type="System">
+                                            <param id="0" name="Object">BulletRight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="139708791765417" type="BulletRight">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="417714591092433" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="761775590284821" type="BulletRight">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="468940967473873" title="Spinners">
+            <sub-events>
+                <event-block sid="524531433886962">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="877601564870461" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="492705501231984">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="137047062756669" type="System">
+                                    <param id="0" name="Object">Spinners</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="780184330515710" type="Spinners">
+                                    <param id="0" name="Instance variable">PinToPlatform</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="715232453637427" type="Platform">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Spinners.X</param>
+                                    <param id="2" name="Y">Spinners.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="392240425304635" type="Spinners">
+                                    <param id="0" name="Pin to">Platform</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="239941688142301">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="533472137884123" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="424092720699052" type="BulletLeft">
+                            <param id="0" name="Object">BulletFadeLeft</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="167412292956508" type="BulletFadeLeft">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">BulletLeft</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="173334426191360" type="BulletRight">
+                            <param id="0" name="Object">BulletFadeRight</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="935339722322972" type="BulletFadeRight">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="836333831674350" type="BulletFadeRight">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">BulletRight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="453669281986656">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="183410178535257" type="System">
+                                    <param id="0" name="Object">Platform</param>
+                                    <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-180</param>
+                                </condition>
+                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="152036932261123" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="549612999956849" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="923102732308287" type="Platform">
+                                    <param id="0" name="Object">PlatformFade2</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="953066594405833" type="PlatformFade2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="706531476363903">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="910431359351723" type="System">
+                                    <param id="0" name="Object">Platform</param>
+                                    <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="288855301385543" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="903619362535134" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="144156485947688" type="Platform">
+                                    <param id="0" name="Object">PlatformFade2</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="706033955710124" type="PlatformFade2">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="432802824770874">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="365103689497359" type="System">
+                                    <param id="0" name="Object">RedPlatform</param>
+                                    <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-180</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="742780281004699" type="RedPlatform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="211564101044436" type="RedPlatform">
+                                    <param id="0" name="Object">PlatformFadeRed</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="673773459086485" type="PlatformFadeRed">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="955558514689214">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="477179218773105" type="System">
+                                    <param id="0" name="Object">RedPlatform</param>
+                                    <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="447564100280217" type="RedPlatform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="807540382905268" type="RedPlatform">
+                                    <param id="0" name="Object">PlatformFadeRed</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="153389461608689" type="PlatformFadeRed">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="390485772441569">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="942412533080435" type="System">
+                                    <param id="0" name="Object">BulletSpin1</param>
+                                    <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="227632955319365" type="BulletSpin1" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="965048234880015" type="BulletSpin1">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="191634281814972">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="557148040836971" type="System">
+                                    <param id="0" name="Object">BulletSpin1</param>
+                                    <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="196974038481695" type="BulletSpin1" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="866027689644843" type="BulletSpin1">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="202055050253704">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="868188781209181" type="System">
+                                    <param id="0" name="Object">BulletSpin2</param>
+                                    <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="100241516562673" type="BulletSpin2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="981864636022515" type="BulletSpin2">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="107334649474289">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="620936425516313" type="System">
+                                    <param id="0" name="Object">BulletSpin2</param>
+                                    <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="339888431533731" type="BulletSpin2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="134043402884564" type="BulletSpin2">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="345193196375098">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="478795102480578" type="System">
+                                    <param id="0" name="Object">BulletSpin3</param>
+                                    <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="217359465737226" type="BulletSpin3" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="545132111572167" type="BulletSpin3">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="604438644131924">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="146980140539766" type="System">
+                                    <param id="0" name="Object">BulletSpin3</param>
+                                    <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="747616784443650" type="BulletSpin3" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="693674546887611" type="BulletSpin3">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="910809305265681">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="896161116530286" type="System">
+                                    <param id="0" name="Object">BulletSpin4</param>
+                                    <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="375835614296071" type="BulletSpin4" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="391846070710575" type="BulletSpin4">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="630006608973843">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="424695504982010" type="System">
+                                    <param id="0" name="Object">BulletSpin4</param>
+                                    <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="962992918433199" type="BulletSpin4" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="959538769244056" type="BulletSpin4">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="724141914694373">
+                            <conditions>
+                                <condition behavior="Sine" id="0" name="Is active" sid="625073529525334" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="195638172655335" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="334901362166813" type="Platform">
+                                    <param id="0" name="Object">PlatformFade</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

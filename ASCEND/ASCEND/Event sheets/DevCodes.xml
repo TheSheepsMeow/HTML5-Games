@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DevCodes</name>
+    <events>
+        <event-group description="" disabled="1" sid="508773503528293" title="DevCodes (disable this before export)">
+            <sub-events>
+                <event-block disabled="1" sid="853927164494478">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="518598435501799" type="Keyboard">
+                            <param id="0" name="Key">98</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="923801689101150" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="141914056449131" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="667587080400859" type="Player">
+                            <param id="0" name="Object">PlayerStart2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="752413104044535">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="736961584852675" type="Keyboard">
+                            <param id="0" name="Key">99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="880573033024796" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="556239860481469" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="128837434654359" type="Player">
+                            <param id="0" name="Object">PlayerStart3</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="916683243741351">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="539480473105827" type="Keyboard">
+                            <param id="0" name="Key">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="601025709282994" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="881007602492593" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="391172895849532" type="Player">
+                            <param id="0" name="Object">PlayerStart4</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="121053258484747">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="572207717536205" type="Keyboard">
+                            <param id="0" name="Key">101</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="644276626729195" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="191736610836707" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="972636207395005" type="Player">
+                            <param id="0" name="Object">PlayerStart5</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="267483045422282">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="733370356805342" type="Keyboard">
+                            <param id="0" name="Key">102</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="745362914055276" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="185147998896041" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="362877199247466" type="Player">
+                            <param id="0" name="Object">PlayerStart6</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="770278591076368">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="732884818293448" type="Keyboard">
+                            <param id="0" name="Key">103</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="739761666794440" type="System">
+                            <param id="0" name="Object">PlayerStart7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="290535052033729" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="253474114405162" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="652607415355769" type="Player">
+                            <param id="0" name="Object">PlayerStart7</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block disabled="1" sid="920599651456395">
+                    <conditions />
+                    <actions>
+                        <action id="8" name="Set silent" sid="667016431929749" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

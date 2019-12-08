@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Event sheet 2</include>
+        <variable constant="0" name="spawn" sid="877368143317108" static="0" type="number">0</variable>
+        <variable constant="0" name="timmer" sid="470641759020579" static="0" type="number">60</variable>
+        <variable constant="0" name="topscore" sid="185521497288154" static="0" type="number">0</variable>
+        <variable constant="0" name="points" sid="947885410328332" static="0" type="number">0</variable>
+        <event-block sid="136110181258612">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="969362446667158" type="System" />
+                <condition id="-8" name="Compare two values" sid="770920297154711" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="529582418127967" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="533161857485381">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="576061836606933" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="643648118324144" type="tarp">
+                    <param id="0" name="Target">target</param>
+                </action>
+                <action disabled="1" id="-3" name="Set position" sid="296968981500331" type="target">
+                    <param id="0" name="X">Touch.X</param>
+                    <param id="1" name="Y">226</param>
+                </action>
+                <action id="0" name="Set text" sid="703783300411377" type="points">
+                    <param id="0" name="Text">points</param>
+                </action>
+                <action id="0" name="Set text" sid="503543837013295" type="timmer">
+                    <param id="0" name="Text">timmer</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="627110053415658">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="109742479306562" type="ball">
+                    <param id="0" name="Object">coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="881934152102380" type="coin" />
+                <action id="-10" name="Add to" sid="402874152449618" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="754103797633012">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="866042833446083" type="ball">
+                    <param id="0" name="Object">BlueGem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="804275340224967" type="BlueGem" />
+                <action id="-10" name="Add to" sid="692241683775667" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530438837421506">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="797209791314520" type="ball">
+                    <param id="0" name="Object">greenGem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="558946710213256" type="greenGem" />
+                <action id="-10" name="Add to" sid="150513517401966" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="751578832113694">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="558591020143759" type="ball">
+                    <param id="0" name="Object">purpleGem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="154460305252893" type="purpleGem" />
+                <action id="-10" name="Add to" sid="201504627943345" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="998825416866492">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="924105286820849" type="ball">
+                    <param id="0" name="Object">YellowGem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="655255342897448" type="YellowGem" />
+                <action id="-10" name="Add to" sid="140468642306073" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="917435005510096">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="723817108137658" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="671495853282074" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="482593687308282" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985160015157849">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="455343627670862" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="789457832981196" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="203525099712217" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="254762842085159" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="330194425606360">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="801729084538182" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="878312048252759" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="240854682437999" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="546378555675978" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="609800324787366">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="972556131457638" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="780360752770292" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="444380250843097" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="383639660806364" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="276667351344903">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="600521680733816" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="167202515836486" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="808569757618398" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="510310134132839" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="316075429124082">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="613634297550266" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="330741954889980" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="345604060123590" type="System">
+                    <param id="0" name="Object to create">coin</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="715700378302574" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="116982969470801">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="230469539887741" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="137242005740103" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="265064320613198" type="System">
+                    <param id="0" name="Object to create">BlueGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="694915053777839" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="674416364846401">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="339180010880962" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="196928413514055" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="873402207368052" type="System">
+                    <param id="0" name="Object to create">BlueGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="474984538374110" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="194787121638098">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="668205956415495" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="672957135731195" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="184240690330974" type="System">
+                    <param id="0" name="Object to create">BlueGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="469290453173013" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="501833035028514">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="630452763832313" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="256599132452737" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="868051313988368" type="System">
+                    <param id="0" name="Object to create">BlueGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="961451996008422" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="590722066480895">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="714263207984985" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="690480332444983" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="627575763216968" type="System">
+                    <param id="0" name="Object to create">greenGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="580518876168822" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="637314747471228">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="839752433954720" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="507131310794336" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="499254670359061" type="System">
+                    <param id="0" name="Object to create">greenGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="544851931984144" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="217362652267767">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="273123181548172" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">12</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="674339977596455" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="574715233378515" type="System">
+                    <param id="0" name="Object to create">greenGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="664645794577314" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="706212015686073">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="627932081753305" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">13</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="185533043410928" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="618582798315812" type="System">
+                    <param id="0" name="Object to create">purpleGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="779203986692233" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="182136492187021">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="212738599338912" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">14</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="859827332882259" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="169621217422361" type="System">
+                    <param id="0" name="Object to create">purpleGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="123404345797339" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="198028524651505">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="760199940489908" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">15</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="156669917896995" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="195574213735418" type="System">
+                    <param id="0" name="Object to create">YellowGem</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(38,614)</param>
+                    <param id="3" name="Y">random(184,32)</param>
+                </action>
+                <action id="-9" name="Set value" sid="354423088425940" type="System">
+                    <param id="0" name="Variable">spawn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="634419584892188">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="989175408800990" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="212572813451554" type="coin">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="855411754650275" type="BlueGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="508263551634585" type="greenGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="483739033198017" type="purpleGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="259494690019055" type="YellowGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="889711508850105">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="497255965661132" type="coin">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="145424019155183" type="coin">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166664017007798">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="960024931530175" type="BlueGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="795294758993055" type="BlueGem">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826637664628712">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="608756933579756" type="greenGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="213339591923003" type="greenGem">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915255170048354">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="215390191896489" type="purpleGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="715344452464047" type="purpleGem">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812819259532952">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="546150402734051" type="YellowGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="405694915259967" type="YellowGem">
+                    <param id="0" name="Speed">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908002934477660">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="119115724084541" type="coin">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="658290487560348" type="coin">
+                    <param id="0" name="Speed">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262920473334222">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="229904109991203" type="BlueGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="936139151161531" type="BlueGem">
+                    <param id="0" name="Speed">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="647042887375568">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="339425070458904" type="greenGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="287142409169562" type="greenGem">
+                    <param id="0" name="Speed">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260752500789847">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="660280294349776" type="purpleGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="931527124921493" type="purpleGem">
+                    <param id="0" name="Speed">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="306603153378946">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="179751701731892" type="YellowGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="999183759602337" type="YellowGem">
+                    <param id="0" name="Speed">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256720139626634">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="814751039687257" type="coin">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="796582816598940" type="coin" />
+            </actions>
+        </event-block>
+        <event-block sid="474976069800671">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="463026096164002" type="BlueGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="584490179378308" type="BlueGem" />
+            </actions>
+        </event-block>
+        <event-block sid="680342616228742">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="512124297300221" type="greenGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="806685733626745" type="greenGem" />
+            </actions>
+        </event-block>
+        <event-block sid="213855892169653">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="997025807281229" type="purpleGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="131191786940983" type="purpleGem" />
+            </actions>
+        </event-block>
+        <event-block sid="914346030127902">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="337967444276408" type="YellowGem">
+                    <param id="0" name="Instance variable">timeonearth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="576442421712178" type="YellowGem" />
+            </actions>
+        </event-block>
+        <event-block sid="202649515636672">
+            <conditions>
+                <condition id="3" name="On touched object" sid="367116274985174" type="Touch">
+                    <param id="0" name="Object">pause</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="957346546533363" type="start" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="952362083257101" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="140954042124663" type="pausescreen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="495685295494180" type="resume">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="532484681605317">
+            <conditions>
+                <condition id="3" name="On touched object" sid="988193550331244" type="Touch">
+                    <param id="0" name="Object">resume</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="970552481079766" type="resume" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="864284617026613" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="483314877680209" type="pausescreen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="773613289045212" type="resume">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="720934138028556">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="357735068725389" type="ball">
+                    <param id="0" name="Object">respwan</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="279789821974746" type="ball" />
+                <action id="-16" name="Wait" sid="661941107553052" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="661225124987645" type="target">
+                    <param id="0" name="Object">ball</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625722365777797">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="914462338890500" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="920409866750084" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="879324510636093" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="140510696432880">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="177854673317819" type="Touch">
+                    <param id="0" name="Object">arrowL</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="246014311612662" type="target">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">273</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="167399293882449" type="target">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="630388505249920">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="367148817681038" type="Touch">
+                    <param id="0" name="Object">arrowR</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="952711290405518" type="target">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">365</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="693250817730868" type="target">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="232092484025390">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="619297944923848" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="271452356426244" type="fairyGoblin">
+                    <param id="0" name="Object">tarp</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="776801598024727" type="fairyGoblin2">
+                    <param id="0" name="Object">tarp</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
