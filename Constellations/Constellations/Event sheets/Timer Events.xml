@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Timer Events</name>
+    <events>
+        <event-group description="" sid="167020663087791" title="Timers">
+            <sub-events>
+                <event-block sid="829550090635108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="534708898531388" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-21" name="Is between values" sid="532975077297375" type="System">
+                            <param id="0" name="Value">Timer</param>
+                            <param id="1" name="Lower bound">1</param>
+                            <param id="2" name="Upper bound">5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="519496409747305" type="System">
+                            <param id="0" name="Variable">Completed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="824248152876034" type="Timer">
+                            <param id="0" name="Text">Timer</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="146206244680358">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="135487391524638" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="230699503232694" type="System">
+                            <param id="0" name="Variable">Completed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="380218996293080" type="System">
+                            <param id="0" name="Variable">Completed</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="313306260461034" type="meteor">
+                            <param id="0" name="Object">meteorStop</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="403599082764176" type="meteor" />
+                        <action id="-9" name="Destroy" sid="330428763958263" type="TimerMeter" />
+                        <action id="0" name="Set text" sid="885939761281252" type="Timer">
+                            <param id="0" name="Text">&quot;Oh No!&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="936988212193728" type="Camera">
+                            <param id="0" name="Magnitude">40</param>
+                            <param id="1" name="Duration">0.8</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="749389284700080" type="Audio">
+                            <param id="0" name="Audio file">Press Down 2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="949441959080133" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="747355798709323" type="Audio">
+                            <param id="0" name="Tag">&quot;Touch&quot;</param>
+                        </action>
+                        <action disabled="1" id="-26" name="Restart layout" sid="243582955764687" type="System" />
+                        <action id="-16" name="Wait" sid="228366898621034" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="992203819014256" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="362484342750543" type="System" />
+                        <action id="-45" name="Reset persisted objects" sid="266594046263230" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="877204183524368">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="583078689024511" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="560159767356730" type="System">
+                            <param id="0" name="Variable">Completed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="812340556874899" type="Timer">
+                            <param id="0" name="Text">&quot;Success!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="445239412721077">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="313886261942569" type="System">
+                            <param id="0" name="Interval (seconds)">0.02</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="728196770943952" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="671412381869184" type="System">
+                            <param id="0" name="Variable">Completed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="792337618189239" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="734100619285112">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="381060196630149" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="314987674736813" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="313867121357053" type="Audio">
+                            <param id="0" name="Audio file">Low time 2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;Warning&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="709436050212485" type="meteor">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>visual indication of low timer</comment>
+        <event-block sid="781832917239357">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="789023069682746" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="949395865231121" type="TimeMeter">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="918612964582239" type="meteor">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="693749954056669" type="meteor">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="999768177403718" type="meteor">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="422419045849340">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="692966995427772" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">310</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="395902313493711" type="System">
+                    <param id="0" name="Variable">Completed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="813669345947735" type="TimeMeter">
+                    <param id="0" name="Speed">8.5</param>
+                </action>
+                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="931472379119365" type="meteor">
+                    <param id="0" name="Speed">85</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="626353249215769" type="meteor">
+                    <param id="0" name="Speed">-90</param>
+                </action>
+                <action id="-3" name="Set position" sid="581978993420662" type="meteor">
+                    <param id="0" name="X">TimerMeter.X + TimerMeter.Width</param>
+                    <param id="1" name="Y">meteor.y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="671772389873566">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="899841229823054" type="System" />
+                <condition id="-14" name="Compare variable" sid="463176396957229" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">310</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="786025519463123" type="System">
+                    <param id="0" name="Variable">Completed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="176784430687800" type="TimerMeter">
+                    <param id="0" name="Width">lerp(Self.Width, Self.Width - 30, 0.05)</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="639666803635297" type="meteor">
+                    <param id="0" name="Object">meteorFade</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="847166929262280">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="672392693549096" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="578171457519390">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="871682213356276" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="129277693187316" type="System">
+                            <param id="0" name="Object to create">meteor2</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">choose(-30, 350)</param>
+                            <param id="3" name="Y">random(30, 400)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="867379817106116">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="983886396422020" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="451211136115256">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="163028886801741" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="280568705308662" type="System">
+                            <param id="0" name="Object to create">meteor2</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">choose(-200, 600)</param>
+                            <param id="3" name="Y">random(-150, 600)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="197591754485792">
+            <conditions>
+                <condition id="-18" name="On created" sid="470131987028738" type="meteor2" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="515860421263739" type="meteor2">
+                    <param id="0" name="Speed">random(10, 35)</param>
+                </action>
+                <action id="9" name="Set scale" sid="307494764003521" type="meteor2">
+                    <param id="0" name="Scale">random(0.03, 0.1)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="282952602973747">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="846951946955283" type="meteor2">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="934433073996472" type="meteor2">
+                            <param id="0" name="Angle">random(-45, 45)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="119392247423396">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="194414484072508" type="meteor2">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="202536382320802" type="meteor2">
+                            <param id="0" name="Angle">random(135, 225)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

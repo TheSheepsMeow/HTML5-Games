@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PersistableFontDetails xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Letterset>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#"'&amp;()[]|`\/@°+=*$£€&lt;&gt;%</Letterset>
+  <AdjustHeight>0</AdjustHeight>
+  <AdjustWidth>0</AdjustWidth>
+  <SampleText>Rotate</SampleText>
+  <ShiftHorz>0</ShiftHorz>
+  <ShiftVert>6</ShiftVert>
+  <ShowGrid>true</ShowGrid>
+  <ShowBoundary>false</ShowBoundary>
+  <Size>36</Size>
+  <StrikeOut>false</StrikeOut>
+  <Underline>false</Underline>
+  <IsFill>true</IsFill>
+  <IsOutlineOne>true</IsOutlineOne>
+  <IsOutlineTwo>true</IsOutlineTwo>
+  <IsShadow>false</IsShadow>
+  <OutlineOneWidth>4</OutlineOneWidth>
+  <OutlineTwoWidth>5</OutlineTwoWidth>
+  <ShadowWidth>4</ShadowWidth>
+  <ShadowOffsetX>4</ShadowOffsetX>
+  <ShadowOffsetY>4</ShadowOffsetY>
+  <FontStyleDisplayName>Bold</FontStyleDisplayName>
+  <Height>44</Height>
+  <Width>31</Width>
+  <FontFamilyName>Cutive Mono</FontFamilyName>
+  <FontStyleName>Normal</FontStyleName>
+  <FontStretchName>Normal</FontStretchName>
+  <FontWeightName>Bold</FontWeightName>
+  <FillColourName>#FF3906A6</FillColourName>
+  <OutlineOneColourName>#FFD9A71E</OutlineOneColourName>
+  <OutlineTwoColourName>#FFFDFFD0</OutlineTwoColourName>
+  <ShadowColourName>#80000000</ShadowColourName>
+  <SampleBackgroundColourName>#FF3B1C40</SampleBackgroundColourName>
+</PersistableFontDetails>

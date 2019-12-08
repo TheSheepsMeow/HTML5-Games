@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PersistableFontDetails xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Letterset>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#"'&amp;()[]|`\/@°+=*$£€&lt;&gt;%</Letterset>
+  <AdjustHeight>0</AdjustHeight>
+  <AdjustWidth>0</AdjustWidth>
+  <SampleText>Success!</SampleText>
+  <ShiftHorz>0</ShiftHorz>
+  <ShiftVert>0</ShiftVert>
+  <ShowGrid>true</ShowGrid>
+  <ShowBoundary>false</ShowBoundary>
+  <Size>36</Size>
+  <StrikeOut>false</StrikeOut>
+  <Underline>false</Underline>
+  <IsFill>true</IsFill>
+  <IsOutlineOne>false</IsOutlineOne>
+  <IsOutlineTwo>true</IsOutlineTwo>
+  <IsShadow>false</IsShadow>
+  <OutlineOneWidth>1</OutlineOneWidth>
+  <OutlineTwoWidth>2</OutlineTwoWidth>
+  <ShadowWidth>4</ShadowWidth>
+  <ShadowOffsetX>4</ShadowOffsetX>
+  <ShadowOffsetY>4</ShadowOffsetY>
+  <FontStyleDisplayName>Bold</FontStyleDisplayName>
+  <Height>56</Height>
+  <Width>34</Width>
+  <FontFamilyName>Indie Flower</FontFamilyName>
+  <FontStyleName>Normal</FontStyleName>
+  <FontStretchName>Normal</FontStretchName>
+  <FontWeightName>Bold</FontWeightName>
+  <FillColourName>#FF3A230F</FillColourName>
+  <OutlineOneColourName>#FF008000</OutlineOneColourName>
+  <OutlineTwoColourName>#FFFDFFD0</OutlineTwoColourName>
+  <ShadowColourName>#80000000</ShadowColourName>
+  <SampleBackgroundColourName>#00FFFFFF</SampleBackgroundColourName>
+</PersistableFontDetails>
