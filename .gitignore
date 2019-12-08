@@ -2,3 +2,12 @@
 *.uistate.xml
 *.capx.backup*
 *.capx.autosave*
+
+
+## (Octopus Adventure) ##
+/node_modules
+/tmp/*
+.grunt
+logs
+*.log
+.DS_Store
