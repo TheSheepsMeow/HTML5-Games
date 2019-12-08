@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Collectibles</name>
+    <events>
+        <variable constant="0" name="SpawnChance" sid="876138984674661" static="0" type="number">0</variable>
+        <event-block sid="696976518239991">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="217165167783241" type="System" />
+            </conditions>
+            <actions>
+                <action id="-30" name="Set layer effect enabled" sid="899737282422289" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Vignette&quot;</param>
+                </action>
+                <action id="-30" name="Set layer effect enabled" sid="952753408865333" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                </action>
+                <action id="-30" name="Set layer effect enabled" sid="812449074940762" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                </action>
+                <action id="-30" name="Set layer effect enabled" sid="894858120475210" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="390561440763992" title="Collectibles">
+            <sub-events>
+                <event-block sid="556275462698521">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="880480161992280" type="familyCollectibles" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="795019230484937" type="familyCollectibles">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="648931484202797">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="418057398463118" type="familyCollectibles">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="499825728939368" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="649903782057835" type="familyCollectibles">
+                            <param id="0" name="Opacity">familyCollectibles.Opacity + 10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="405889090693299">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="342755703472718" type="familyCollectibles">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="792458185754731" type="familyCollectibles">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="collectibleSpawnDistance" sid="517144515783366" static="0" type="number">50</variable>
+                <comment>SpawnCandy (The distance from the enemy after colliding , The X location you want to spawn it, The Y location you want to spawn it)</comment>
+                <event-block sid="484536606783543">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="456737036272764" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="451917662416650" type="Function">
+                            <param id="0" name="Name">&quot;Spawn Candy&quot;</param>
+                            <param id="1" name="Parameter {n}">collectibleSpawnDistance{###}LayoutWidth-collectibleSpawnDistance{###}LayoutHeight-collectibleSpawnDistance</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668151957664748">
+                    <conditions>
+                        <condition id="0" name="On function" sid="740134728315315" type="Function">
+                            <param id="0" name="Name">&quot;Spawn Candy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="347215968846219" type="System">
+                            <param id="0" name="Variable">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="165123913076893" type="System">
+                            <param id="0" name="Variable">SpawnChance</param>
+                            <param id="1" name="Value">random(0, 100)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>These are the percentage chances of each candy type dropping. Make sure they add up to 100</comment>
+                        <variable constant="0" name="nothingChance" sid="351946147520585" static="0" type="number">10</variable>
+                        <variable constant="0" name="candyChance" sid="264417811676505" static="0" type="number">60</variable>
+                        <variable constant="0" name="timeChance" sid="860436617512106" static="0" type="number">10</variable>
+                        <variable constant="0" name="aoeChance" sid="985771111179086" static="0" type="number">10</variable>
+                        <variable constant="0" name="invulChance" sid="409972278205463" static="0" type="number">10</variable>
+                        <event-block sid="467759812299243">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="992005640967869" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="733053891724254" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">nothingChance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="542085215885414" type="System">
+                                    <param id="0" name="Object to create">bg_grass</param>
+                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                    <param id="2" name="X">random(LayoutWidth)</param>
+                                    <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="283016306578628" type="bg_grass">
+                                    <param id="0" name="Scale">random(0.25,0.75)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="183650347343969">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="950318841157930" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">nothingChance</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="833071158328879" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">nothingChance+candyChance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="489879323942515" type="System">
+                                    <param id="0" name="Object to create">Candy</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                    <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="214575669343445">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="415189771666977" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">nothingChance+candyChance</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="117297591609470" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="465013530794705">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="682968850916100" type="System">
+                                            <param id="0" name="First value">TimeCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="553180409541845" type="System">
+                                            <param id="0" name="Object to create">TimeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="782309761306285">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="791042984220819" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="-3" name="Create object" sid="159749641885404" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="694094295625566" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="202045020080364">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="590821991339531" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="168096436073640" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance+aoeChance</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="189963930238531">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="209663338199235" type="System">
+                                            <param id="0" name="First value">AoeCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="942431250867291" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="804436426307203">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="214544839061335" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="622284616827292" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="697358806036475">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="348176949432633" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance+aoeChance</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="178946369440662" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="905564480317647">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="585127105745414" type="System">
+                                            <param id="0" name="First value">InvulCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="468373886994806" type="System">
+                                            <param id="0" name="Object to create">InvulCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="629909313412969">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="561355370648156" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="706464127965209" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="617023808962123" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Regular candy that gives points" sid="751510562931491" title="Candy">
+            <sub-events>
+                <event-block sid="848024007356024">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="244388918088032" type="player">
+                            <param id="0" name="Object">Candy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="571630400521740" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="952089917092314" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="632652073396344" type="Candy">
+                            <param id="0" name="Object">ScoreParticles</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="940923065980940" type="Candy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="When picked up does AOE to enemies" sid="610405757655759" title="AoeCandy">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="638491721706332">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="295350474351614" type="player">
+                            <param id="0" name="Object">AoeCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="557135488373415" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="628133657814655" type="AoeCandy">
+                            <param id="0" name="Object">AOEParticles</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action disabled="1" id="7" name="Play (by name)" sid="977257375768718" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="879674942577625" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="195707824587126" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;marimbomb&quot; &amp; choose(0,1,2,3)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="226699906483200" type="camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.5</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="208591308012196" type="AoeCandy" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="237318751183222">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="888116206251470" type="System">
+                                    <param id="0" name="Object">familyEnemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="195015541086442" type="Function">
+                                    <param id="0" name="Name">&quot;Spawn Candy&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}familyEnemies.X{###}familyEnemies.Y</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="876189123226213" type="familyEnemies">
+                                    <param id="0" name="Object">Candy</param>
+                                    <param id="1" name="Layer">Self.LayerNumber</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="526868538536846" type="familyEnemies">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Makes player invulnerable for a set time" sid="951026337973007" title="InvulCandy">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="965124988365369">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="760053675782245" type="player">
+                            <param id="0" name="Object">InvulCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="222954602665789" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="415301994384405" type="Audio">
+                            <param id="0" name="Tag">&quot;invul&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="314873417068226" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="855566146918934" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="687904728218378" type="Audio">
+                            <param id="0" name="Audio file">slimecrash_invul</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="577039080935685" type="player">
+                            <param id="0" name="Object">ScoreParticles</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action disabled="1" id="-11" name="Add to" sid="649444220546092" type="player">
+                            <param id="0" name="Instance variable">InvulTimer</param>
+                            <param id="1" name="Value">InvulCandy.Duration</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="971211095444801" type="player">
+                            <param id="0" name="Instance variable">InvulTimer</param>
+                            <param id="1" name="Value">InvulCandy.Duration</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="221680335880437" type="InvulCandy" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="987565249712425">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="533489291075104" type="player">
+                                    <param id="0" name="Instance variable">Invul</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="330295070361100" type="player">
+                                    <param id="0" name="Instance variable">Invul</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="253827271528182">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="871333901636564" type="player">
+                            <param id="0" name="Instance variable">Invul</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="155289719382637" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="999660793412086" type="player">
+                            <param id="0" name="Instance variable">InvulTimer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="776392306197169">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="885374477719191" type="player">
+                            <param id="0" name="Instance variable">Invul</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="859666528907070" type="System">
+                            <param id="0" name="Interval (seconds)">1/(10*player.InvulTimer+1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="728646373025185" type="playerAnimations">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">random(0,100)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="665777297639020" type="playerHelmet">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">random(0,100)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="183662816209325" type="Bg_Plant">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">random(0,100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="395818346400428">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="302443329762277" type="player">
+                            <param id="0" name="Instance variable">Invul</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="383180963663308" type="playerAnimations">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="745310114009195" type="playerHelmet">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706749154102248">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="219990014802799" type="player">
+                            <param id="0" name="Instance variable">InvulTimer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="817779530801937" type="player">
+                            <param id="0" name="Instance variable">Invul</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Slows down enemies" sid="794110627143077" title="TimeCandy">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="360000207694128">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="523053158088525" type="player">
+                            <param id="0" name="Object">TimeCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="870986202287964" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="864515380483065" type="Audio">
+                            <param id="0" name="Tag">&quot;time&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="290400469141321" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="189191189224106" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="949577186451734" type="Audio">
+                            <param id="0" name="Audio file">slimecrash_time</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;time&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="131199661258172" type="player">
+                            <param id="0" name="Object">ScoreParticles</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="848394345806395" type="player">
+                            <param id="0" name="Instance variable">SlowDownTimer</param>
+                            <param id="1" name="Value">TimeCandy.Duration</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="756095831745210" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Vignette&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="181220612411752" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="132903545639438" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="168982857507565" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="397105247426570" type="timeCandyHand">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="840939573065363" type="TimeCandy" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="741165298495336">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="345444754125447" type="timeCandyClock" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-3" name="Create object" sid="993771253523029" type="System">
+                                    <param id="0" name="Object to create">timeCandyClock</param>
+                                    <param id="1" name="Layer">&quot;FX&quot;</param>
+                                    <param id="2" name="X">LayoutWidth/2</param>
+                                    <param id="3" name="Y">LayoutHeight/2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="696427987658497" type="timeCandyClock">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="137809352842471" type="timeCandyHand">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="655958656338991" type="timeCandyHand">
+                                    <param id="0" name="Pin to">timeCandyClock</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="653736473980125" type="timeCandyHand">
+                                    <param id="0" name="Instance variable">ClockTurnRate</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="977804344274138">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="664726546744406" type="player">
+                                    <param id="0" name="Instance variable">SlowDown</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="252059348122768" type="player">
+                                    <param id="0" name="Instance variable">SlowDown</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="374970776294879">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="324956622503266" type="player">
+                            <param id="0" name="Instance variable">SlowDownTimer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="974651867338012" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="141820566780227" type="player">
+                            <param id="0" name="Instance variable">SlowDown</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="146331071017371" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Vignette&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="614549337901909" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="644584831149349" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="886818572185070" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Sepia&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="618862765045875" type="timeCandyClock">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="366956415485537" type="timeCandyHand">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
+                    </actions>
+                </event-block>
+                <event-block sid="440986196412826">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="111015293064067" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="968495368218890">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="240430317399300" type="player">
+                                    <param id="0" name="Instance variable">SlowDown</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Set object time scale" sid="517069390872639" type="System">
+                                    <param id="0" name="Object">familyEnemies</param>
+                                    <param id="1" name="Time scale">0.2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="404277020240552">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="687364872329946" type="System">
+                                            <param id="0" name="Interval (seconds)">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="898753750167235" type="player">
+                                            <param id="0" name="Instance variable">SlowDownTimer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="808763807938253">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="168607475687341" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="579534987367395" type="System">
+                            <param id="0" name="Object">familyEnemies</param>
+                            <param id="1" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="584329112330557">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="868193550203573" type="player">
+                            <param id="0" name="Instance variable">SlowDown</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="290063368142047" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Restore object time scale" sid="316075694851058" type="System">
+                            <param id="0" name="Object">familyEnemies</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="212201410002054">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="639256475774344" type="timeCandyHand" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-8" name="Set angle" sid="487864388032778" type="timeCandyHand">
+                            <param id="0" name="Angle">timeCandyHand.Angle + (360/7)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="811950590129719" type="timeCandyHand">
+                            <param id="0" name="Degrees">lerp(0, 360, 0.0198 / Self.ClockTurnRate)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="668236297581508">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="805068656718230" type="System">
+                                    <param id="0" name="Interval (seconds)">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Paste Object" sid="185913554148391" type="Canvas">
+                                    <param id="0" name="object">timeCandyHand</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Candy that gives points during bonus phase" sid="349078748850422" title="BonusCandy">
+            <sub-events>
+                <event-block sid="873780738861774">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="169881933379643" type="player">
+                            <param id="0" name="Object">BonusCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="620426602551123" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="498498524918007" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="528532445727313" type="BonusCandy">
+                            <param id="0" name="Object">ScoreParticles</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="996072832639390" type="BonusCandy" />
+                    </actions>
+                </event-block>
+                <event-block sid="123952814487614">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="486582435805945" type="BonusCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="406593656965255" type="BonusCandy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment></comment>
+        <event-group description="" sid="441909089308735" title="Collectible Animations">
+            <sub-events>
+                <comment>Shake Animation</comment>
+                <event-block sid="100831696242751">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="740721708440383" type="System">
+                            <param id="0" name="Object">familyCollectibles</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="874779594073997">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="268682571255163" type="familyCollectibles">
+                                    <param id="0" name="Animation">&quot;Shake&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="459500142576332" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="336522744454765" type="familyCollectibles">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="740847228380077" type="familyCollectibles">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="686484884306609" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="230410351179067" type="familyCollectibles">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine2" id="0" name="Set active" sid="106076548344531" type="familyCollectibles">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="872121199268264" type="familyCollectibles">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="843887009096398">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="386646213370334" type="familyCollectibles" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="949086941622288" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="662179863851763">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="581853706508143" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="430897435827683" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="128239358386494" type="System">
+                            <param id="0" name="Seconds">random(2,3)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="516143079968002" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Shake&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995634578935041">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="876979572341352" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Shake&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="541041803460004" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="703459318196745" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="659697007494108" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="824769851036526">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

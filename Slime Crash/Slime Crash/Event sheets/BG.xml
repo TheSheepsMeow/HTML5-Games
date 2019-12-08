@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BG</name>
+    <events>
+        <variable constant="0" name="boundaryTop" sid="404479919684965" static="0" type="number">100</variable>
+        <variable constant="0" name="boundaryBottom" sid="185690099415216" static="0" type="number">400</variable>
+        <event-group description="" sid="111163590027077" title="BG objects">
+            <sub-events>
+                <event-block sid="739544011725589">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="859440007620141" type="System" />
+                        <condition id="-12" name="Repeat" sid="521550074285355" type="System">
+                            <param id="0" name="Count">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="929078839982976" type="System">
+                            <param id="0" name="Object to create">bg_dirt</param>
+                            <param id="1" name="Layer">&quot;BG&quot;</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="405826434193810" type="bg_dirt">
+                            <param id="0" name="Scale">random(0.25,0.85)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="154953597835051" type="System">
+                            <param id="0" name="Object to create">bg_grass</param>
+                            <param id="1" name="Layer">&quot;BG&quot;</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="361711167040093" type="bg_grass">
+                            <param id="0" name="Scale">random(0.25,0.75)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="432225070266512">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="909628890899567" type="System" />
+                        <condition id="-12" name="Repeat" sid="950821960906565" type="System">
+                            <param id="0" name="Count">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="386922920165182" type="System">
+                            <param id="0" name="Object to create">bg_flower</param>
+                            <param id="1" name="Layer">&quot;BG&quot;</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="623365017010461" type="bg_flower">
+                            <param id="0" name="Scale">random(0.25,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>This could be done in a better way</comment>
+        <event-group description="" sid="588393243527790" title="Overlapping">
+            <sub-events>
+                <event-block sid="871051714561828">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="822619590558987" type="bg_dirt">
+                            <param id="0" name="Object">bg_grass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="333390485980813" type="bg_dirt" />
+                    </actions>
+                </event-block>
+                <event-block sid="993063050077848">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="679525475109618" type="bg_dirt">
+                            <param id="0" name="Object">bg_dirt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="163570444286017" type="bg_dirt" />
+                    </actions>
+                </event-block>
+                <event-block sid="953179238434301">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="300267782784145" type="bg_dirt">
+                            <param id="0" name="Object">bg_flower</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="388425736340943" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="441562382243899" type="bg_dirt" />
+                    </actions>
+                </event-block>
+                <event-block sid="371146144619174">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="217978423349026" type="bg_dirt">
+                            <param id="0" name="Object">bg_flower</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="150299004034390" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="942279218411382" type="bg_flower" />
+                    </actions>
+                </event-block>
+                <event-block sid="494711450571206">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="502925750377167" type="bg_grass">
+                            <param id="0" name="Object">bg_flower</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="873964933086786" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="215789201257734" type="bg_flower" />
+                    </actions>
+                </event-block>
+                <event-block sid="611521259572565">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="455567458907884" type="bg_grass">
+                            <param id="0" name="Object">bg_grass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="127360896170346" type="bg_grass" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="445924778841027" title="Rustle Bushes">
+            <sub-events>
+                <event-block sid="586802146339576">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="658107278675855">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="639631441267578" type="familyEnemies">
+                            <param id="0" name="Object">Bg_Plant</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="755738245335911" type="familyEnemies">
+                            <param id="0" name="Instance variable">rustled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="1" name="Set period" sid="787768818601906" type="Bg_Plant">
+                            <param id="0" name="Period">0.2</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="900482840352312" type="Bg_Plant">
+                            <param id="0" name="Magnitude">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="287116201404195" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="965126380406304" type="Bg_Plant">
+                            <param id="0" name="Period">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="594521043609444" type="Bg_Plant">
+                            <param id="0" name="Magnitude">0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="521710396415015" type="familyEnemies">
+                            <param id="0" name="Instance variable">rustled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="654040669688137">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="512421792471939">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="963397962213161">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="855096975745809">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="329464145826168">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

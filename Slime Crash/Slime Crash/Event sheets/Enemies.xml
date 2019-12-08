@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies</name>
+    <events>
+        <variable constant="0" name="isBonusLevel" sid="967815929207434" static="0" type="number">0</variable>
+        <variable constant="0" name="spawnRate" sid="490405810054959" static="0" type="number">3</variable>
+        <variable constant="0" name="scoreTier1" sid="616262165797486" static="0" type="number">10</variable>
+        <variable constant="0" name="scoreTier2" sid="174744436137850" static="0" type="number">20</variable>
+        <variable constant="0" name="scoreTier3" sid="176410574076772" static="0" type="number">30</variable>
+        <variable constant="0" name="scoreTier4" sid="307510598520176" static="0" type="number">40</variable>
+        <variable constant="0" name="scoreTier5" sid="161601489204453" static="0" type="number">50</variable>
+        <event-group description="" sid="306964845839215" title="Enemy Spawn Rate">
+            <sub-events>
+                <comment></comment>
+                <event-block sid="247639706049754">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="917814061519100">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="246767403235963" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="979943405779559" type="familyEnemyDeath">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748526189127129">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="634895855614493">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="412745059969973">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="488055570681357" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="427055317123381" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">scoreTier1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="522111237195801" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="954425052181950">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="365370559910759" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">scoreTier1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="860815269450371" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">scoreTier2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="659040589447626" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="376984656453053">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="245799072287936" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">scoreTier2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="216462842327985" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">scoreTier3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="710681620648182" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="385965451603414">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="988350331873881" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">scoreTier3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="335246951099012" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">scoreTier4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="535627928442386" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">1.25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761839530806910">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="152087862733045" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">scoreTier4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="836166052854361" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">scoreTier5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="900226169658199" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">1.125</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="127644762754328">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="119532330434656" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">scoreTier5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="204182553815289" type="System">
+                            <param id="0" name="Variable">spawnRate</param>
+                            <param id="1" name="Value">1.0625</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913470776723985">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="306252350301710" title="Cleanup">
+            <sub-events>
+                <event-block sid="422934121676508">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block any="1" sid="429807789974701">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="944109697576379" type="familyEnemies">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">LayoutHeight+ 200</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="178627611562906" type="familyEnemies">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">- 200</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="616414789581800" type="familyEnemies">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">LayoutWidth + 200</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="359952879632981" type="familyEnemies">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">- 200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="330642356729663" type="familyEnemies" />
+                    </actions>
+                </event-block>
+                <event-block sid="269713713786752">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="188214979477712" title="Enemy Spawning">
+            <sub-events>
+                <variable constant="0" name="enemySpawn" sid="497738478152789" static="0" type="number">0</variable>
+                <variable constant="0" name="enemySpawnDistance" sid="525821887074233" static="0" type="number">50</variable>
+                <comment></comment>
+                <event-block sid="250593321485403">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="527782176006864" type="System">
+                            <param id="0" name="Interval (seconds)">spawnRate + random(-1,1)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="112819303877014" type="System">
+                            <param id="0" name="Variable">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="953751066835027" type="System">
+                            <param id="0" name="Variable">enemySpawn</param>
+                            <param id="1" name="Value">choose(0,1,2,3)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment></comment>
+                        <event-block sid="485675745151201">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="802562384070022" type="System">
+                                    <param id="0" name="Variable">enemySpawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="567387560699691" type="System">
+                                    <param id="0" name="Object to create">enemy2</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                    <param id="3" name="Y">-enemySpawnDistance</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="205007158159760">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="857302725519937" type="System">
+                                            <param id="0" name="Variable">score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">scoreTier1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="891675427811878" type="System">
+                                            <param id="0" name="Object to create">enemyBasic</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                            <param id="3" name="Y">-enemySpawnDistance</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="883823802008074">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="180562759267201" type="System">
+                                                    <param id="0" name="First value">enemy3.Count</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="128977873132519" type="System">
+                                                    <param id="0" name="Object to create">enemy3</param>
+                                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                                    <param id="3" name="Y">-enemySpawnDistance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="246779006974382">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="447452535904005" type="System">
+                                    <param id="0" name="Variable">enemySpawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="573196294955821" type="System">
+                                    <param id="0" name="Object to create">enemy2</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                    <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="914648692496278">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="157712697841212" type="System">
+                                            <param id="0" name="Variable">score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">scoreTier1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="917270411280729" type="System">
+                                            <param id="0" name="Object to create">enemyBasic</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                            <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="987945706347944">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="152306704600453" type="System">
+                                                    <param id="0" name="First value">enemy3.Count</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="713558824266019" type="System">
+                                                    <param id="0" name="Object to create">enemy3</param>
+                                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                                    <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="154048778639843">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="764123262368428" type="System">
+                                    <param id="0" name="Variable">enemySpawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="569708912267904" type="System">
+                                    <param id="0" name="Object to create">enemy2</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="X">-enemySpawnDistance</param>
+                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="909831232163910">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="446237494007313" type="System">
+                                            <param id="0" name="Variable">score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">scoreTier1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="831463258143662" type="System">
+                                            <param id="0" name="Object to create">enemyBasic</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">-enemySpawnDistance</param>
+                                            <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="991605256729332">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="545283007562988" type="System">
+                                                    <param id="0" name="First value">enemy3.Count</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="661489220864383" type="System">
+                                                    <param id="0" name="Object to create">enemy3</param>
+                                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                                    <param id="2" name="X">-enemySpawnDistance</param>
+                                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="759298141597026">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="771008429516853" type="System">
+                                    <param id="0" name="Variable">enemySpawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="186331944668781" type="System">
+                                    <param id="0" name="Object to create">enemy2</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="611114835850886">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="119167822470883" type="System">
+                                            <param id="0" name="Variable">score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">scoreTier1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="618887985206607" type="System">
+                                            <param id="0" name="Object to create">enemyBasic</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                            <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="958267594456300">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="435420703996043" type="System">
+                                                    <param id="0" name="First value">enemy3.Count</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="817096002996589" type="System">
+                                                    <param id="0" name="Object to create">enemy3</param>
+                                                    <param id="1" name="Layer">&quot;MG&quot;</param>
+                                                    <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="293594052064311">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="243783012989705">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="148724386424268">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="587787996191977">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="976134024464763">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Chases player. Higher movement speed when your score is higher." sid="680421385560306" title="enemyBasic">
+            <sub-events>
+                <event-block sid="100810884121877">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="418319675254958">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="161039892042259" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="296838292464934" type="enemyBasic">
+                            <param id="0" name="Speed">30 * enemyBasic.speedMultiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="921075320025952">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="600640881515808" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="258375873452746">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="661158701376827" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="605140923138764" type="enemyBasic">
+                                    <param id="0" name="Angle">angle(enemyBasic.X, enemyBasic.Y, player.X,player.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="526842840617513">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="863754893740094" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="475723283870412" type="enemyBasic">
+                                    <param id="0" name="Angle">Self.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="680375484584374">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="144350101701298" type="System">
+                            <param id="0" name="First value">score % 5</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="465910380819353" type="System">
+                            <param id="0" name="First value">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="239758743116262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="717393686586612" type="enemyBasic">
+                            <param id="0" name="Instance variable">speedMultiplier</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>death</comment>
+                <event-block sid="452059868998979">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="277149406235154" type="enemyBasic">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="752264185019346" type="enemyBasic">
+                            <param id="0" name="Object">enemyBasicDeath</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="792302771868605" type="enemyBasicDeath">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="978668624482966" type="enemyBasic" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="571271348321619" type="enemyBasicDeath">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="310287110451471" type="enemyBasicDeath">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="429819145157622" type="enemyBasicDeath">
+                            <param id="0" name="Torque">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596767929863742">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Fast enemy that initially aims at the player, but doesn&apos;t change its course. " sid="899223059522624" title="enemy2">
+            <sub-events>
+                <event-block sid="434118398319093">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="858360681216310">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="606617320559043" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="777392470084839" type="enemy2">
+                            <param id="0" name="Speed">100 * enemy2.speedMultiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="297581406993166">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="776531981098184" type="enemy2" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="175150399609147" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="832718708697217" type="enemy2">
+                            <param id="0" name="Angle">angle(enemy2.X, enemy2.Y, player.X,player.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="975569750719330">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="260086250393064" type="System">
+                            <param id="0" name="First value">score % 5</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="667531563280591" type="System" />
+                        <condition id="-8" name="Compare two values" sid="864386189620151" type="System">
+                            <param id="0" name="First value">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="471148535244164" type="enemy2">
+                            <param id="0" name="Instance variable">speedMultiplier</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>death</comment>
+                <event-block sid="298353027312085">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="539211918468213" type="enemy2">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="375601485745399" type="enemy2">
+                            <param id="0" name="Object">enemy2Death</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="465314855490684" type="enemy2Death">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="427862912565201" type="enemy2" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="852125865514117" type="enemy2Death">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="846811760701768" type="enemy2Death">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="834909647147395" type="enemy2Death">
+                            <param id="0" name="Torque">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="406895921247560">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="A big &amp; slow enemy that just occupies space on the screen for a while before leaving." sid="672675018082547" title="enemy3">
+            <sub-events>
+                <event-block sid="770495497011021">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="378653229930024">
+                    <conditions>
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="512902581000464" type="enemy3">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="175457092295668" type="enemy3">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="849874994350204">
+                    <conditions>
+                        <condition behavior="Bullet" id="0" inverted="1" name="Compare speed" sid="971394965418443" type="enemy3">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="663254616497534" type="enemy3">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788541675820639">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="788808784358435">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="615458684446494" type="enemy3">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="281891835657180" type="enemy3">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="909924526985544" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="498846722308855" type="enemy3">
+                            <param id="0" name="Speed">25 * enemy3.speedMultiplier</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="115843038185469" type="enemy3">
+                            <param id="0" name="Angle">angle(enemy3.X, enemy3.Y, player.X,player.Y) + random(-10,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="387059767536624">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="846348235963094" type="enemy3" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="661343589594522" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="846010613834309" type="enemy3">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="842736552239249" type="enemy3">
+                            <param id="0" name="Speed">50 * enemy3.speedMultiplier</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="660424032245479" type="enemy3">
+                            <param id="0" name="Angle">angle(enemy3.X, enemy3.Y, player.X,player.Y) + random(-10,10)</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="417796229878722" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="651949934074680">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>death</comment>
+                <event-block sid="394433452173600">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="974065159127286" type="enemy3">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="458072278277338" type="enemy3">
+                            <param id="0" name="Object">enemy3Death</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="305057754940585" type="enemy3Death">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="260711783380840" type="enemy3" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="874611326749202" type="enemy3Death">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="564023187557352" type="enemy3Death">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="260687171121819" type="enemy3Death">
+                            <param id="0" name="Torque">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="597053094368986">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="506554027346512">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="151022169403034">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Another slime that comes and eats your food before you do." sid="289789299554872" title="enemy4">
+            <sub-events>
+                <event-block sid="497333542835553">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="205976316477471">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="918933326744066">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="546696837899610" title="enemy5">
+            <sub-events>
+                <event-block sid="282671365485570">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="468052272799674">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="600248364802425">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="635280708953695" title="enemy6">
+            <sub-events>
+                <event-block sid="772665091629745">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="908463369852856">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="957887049699320">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
