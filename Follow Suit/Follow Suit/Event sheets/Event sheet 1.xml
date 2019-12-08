@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="countUp" sid="681146852550856" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="773054145440793" static="0" type="number">0</variable>
+        <event-block sid="288828127333333">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="170293295642603">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-group description="" sid="971947807423726" title="Debug">
+            <sub-events>
+                <event-block sid="972746173238589">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="552536958574189">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="956938594555874" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="618686765067763" type="SpriteFont">
+                            <param id="0" name="Text">0</param>
+                        </action>
+                        <action disabled="1" id="8" name="Set silent" sid="476497623171546" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="487487837850328" type="System">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="235858198069253">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="315307896867812" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="771717557589240" type="SpriteFont">
+                            <param id="0" name="Text">countUp &amp; &quot; / &quot; &amp; Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="200933218034095">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="361541529341043">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="810613676248826" title="Setup">
+            <sub-events>
+                <event-block sid="985110677644168">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="623954649948513">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="475946905436289" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="963910441395754" type="System">
+                            <param id="0" name="Object to create">ParticlesTap</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120456623792876">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="141651009938691">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="335924357273551">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="920952074742457" title="Buttons">
+            <sub-events>
+                <event-block sid="856641088102014">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="548855256388080">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="392557974251437" type="Touch">
+                            <param id="0" name="Object">cannonGlass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="797954891560480" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonGlass.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="350912051074389" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="715481845130497">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="583210438912830" type="Touch">
+                            <param id="0" name="Object">cannonEgg</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="198536192407481" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonEgg.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="974971490695533" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="851619366769213">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="260879229251556" type="Touch">
+                            <param id="0" name="Object">cannonHeart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="495771010439362" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonHeart.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="447540452696306" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="284536375840815">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="430283407255591" type="Touch">
+                            <param id="0" name="Object">cannonOre</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="703993140758073" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonOre.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="869096313768429" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853868814145847">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="242581841100364">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="942293061385392">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="765967467467584" title="items">
+            <sub-events>
+                <comment>Diamond</comment>
+                <event-block sid="829017326285706">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="900552860487927" type="Touch">
+                            <param id="0" name="Object">itemDiamond</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="564034419148027" type="Audio">
+                            <param id="0" name="Audio file">Glass (1)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="782503443245966" type="itemDiamond">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="149724181306128" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="959319519934341" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="562619166382431" type="itemDiamond">
+                            <param id="0" name="Animation">&quot;Tapped&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="691730005368800">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="620129646871960" type="Card">
+                            <param id="0" name="Object">itemDiamond</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="1" name="Set acceleration" sid="928592503694775" type="Card">
+                            <param id="0" name="Acceleration">-3000</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="699723706878104" type="itemDiamond">
+                            <param id="0" name="Animation">&quot;GoodBreak&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="619906458790614" type="itemDiamond">
+                            <param id="0" name="Frame number">choose(0,1,2)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="482081491794059" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="339896021197906" type="itemDiamond">
+                            <param id="0" name="Object">ParticlesDiamond</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="444451781688039" type="ParticlesDiamond">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="405057843070961" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="686775289415035" type="itemDiamond" />
+                    </actions>
+                </event-block>
+                <comment>Club</comment>
+                <event-block sid="571792739735373">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="594111541158297" type="Touch">
+                            <param id="0" name="Object">itemClub</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="991490076552104" type="Audio">
+                            <param id="0" name="Audio file">Chick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="717215784370297" type="itemClub">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="187466286906310" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="426966199312653" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="171141811676111" type="itemClub">
+                            <param id="0" name="Animation">&quot;Tapped&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267775810941026">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="183718412103608" type="Card">
+                            <param id="0" name="Object">itemClub</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="1" name="Set acceleration" sid="328557766726233" type="Card">
+                            <param id="0" name="Acceleration">-3000</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="267574666890334" type="itemClub">
+                            <param id="0" name="Animation">&quot;Chick&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="877633620854914" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="524593319069601" type="itemClub">
+                            <param id="0" name="Object">ParticlesClub</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="750693667629029" type="ParticlesClub">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="200185996305261" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="449600589507762" type="itemClub" />
+                    </actions>
+                </event-block>
+                <comment>Heart</comment>
+                <event-block sid="912292918773759">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="956499261079136" type="Touch">
+                            <param id="0" name="Object">itemHeart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="210360376266705" type="Audio">
+                            <param id="0" name="Audio file">Heart</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="342704532201973" type="itemHeart">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="751691383521908" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="106464797223076" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="910549251367486" type="itemHeart">
+                            <param id="0" name="Animation">&quot;Tapped&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440465859584234">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="184689831525754" type="Card">
+                            <param id="0" name="Object">itemHeart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="1" name="Set acceleration" sid="957181619937113" type="Card">
+                            <param id="0" name="Acceleration">-3000</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="985736590314837" type="itemHeart">
+                            <param id="0" name="Animation">&quot;Kiss&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="869230248601789" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="733641693731028" type="itemHeart">
+                            <param id="0" name="Object">ParticlesHeart</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="956883300843784" type="ParticlesHeart">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="841278931702956" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="811814897667071" type="itemHeart" />
+                    </actions>
+                </event-block>
+                <comment>Spade</comment>
+                <event-block sid="322219317104744">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="380105077535218" type="Touch">
+                            <param id="0" name="Object">itemSpade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="128620621078370" type="Audio">
+                            <param id="0" name="Audio file">Ore</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="961993829732167" type="itemSpade">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="547267978919124" type="System">
+                            <param id="0" name="Object to create">Card</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="653360852881010" type="Card">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="383811350753784" type="itemSpade">
+                            <param id="0" name="Animation">&quot;Tapped&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859632684011677">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="571409443018703" type="Card">
+                            <param id="0" name="Object">itemSpade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="1" name="Set acceleration" sid="528041309043049" type="Card">
+                            <param id="0" name="Acceleration">-3000</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="976600744060828" type="itemSpade">
+                            <param id="0" name="Animation">&quot;Gem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="987681564607087" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="303173465524566" type="itemSpade">
+                            <param id="0" name="Object">ParticlesSpade</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="670056937177454" type="ParticlesSpade">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="617259872767369" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="962476245152083" type="itemSpade" />
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="360519822170874">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="942705549625958" type="Card">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="687368209662996" type="Card" />
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="801276663610871">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="373136912713887" type="itemClub">
+                            <param id="0" name="Object">groundFloor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="961513565223567" type="itemClub">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="131953346145963" type="itemClub">
+                            <param id="0" name="Animation">&quot;BadEgg&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="940488750601211" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="526807374726185" type="itemClub" />
+                    </actions>
+                </event-block>
+                <event-block sid="239511314330983">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="154267539617733" type="itemDiamond">
+                            <param id="0" name="Object">groundFloor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="161352419758169" type="itemDiamond">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="309264001167300" type="itemDiamond">
+                            <param id="0" name="Animation">&quot;BadBreak&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="446265385589600" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="696763293503557" type="itemDiamond" />
+                    </actions>
+                </event-block>
+                <event-block sid="948051611425573">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="624557138256712" type="itemHeart">
+                            <param id="0" name="Object">groundFloor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="244993603521342" type="itemHeart">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="149558603748970" type="itemHeart">
+                            <param id="0" name="Animation">&quot;Broken&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="824765481014450" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="899932878960959" type="itemHeart" />
+                    </actions>
+                </event-block>
+                <event-block sid="306809670051983">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="718808992065341" type="itemSpade">
+                            <param id="0" name="Object">groundFloor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="688555545201993" type="itemSpade">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="912359803592973" type="itemSpade">
+                            <param id="0" name="Animation">&quot;Junk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="256869040205383" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="737494093432363" type="itemSpade" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="862722753461598" title="Launching">
+            <sub-events>
+                <event-block sid="297392788427906">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="750551743706129" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="846289398395147" type="cannonGlass">
+                            <param id="0" name="Width">lerp(cannonGlass.Width, 48, 0.05)</param>
+                            <param id="1" name="Height">lerp(cannonGlass.Height, 48, 0.05)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="925443181687576" type="cannonEgg">
+                            <param id="0" name="Width">lerp(cannonEgg.Width, 48, 0.05)</param>
+                            <param id="1" name="Height">lerp(cannonEgg.Height, 48, 0.05)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="500335259696493" type="cannonHeart">
+                            <param id="0" name="Width">lerp(cannonHeart.Width, 48, 0.05)</param>
+                            <param id="1" name="Height">lerp(cannonHeart.Height, 48, 0.05)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="435494223709822" type="cannonOre">
+                            <param id="0" name="Width">lerp(cannonOre.Width, 48, 0.05)</param>
+                            <param id="1" name="Height">lerp(cannonOre.Height, 48, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561703620609786">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="693503724351904">
+                    <conditions>
+                        <condition id="0" name="On function" sid="656756327968120" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="838548112898020" type="cannonGlass">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="464163237692533" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="399559110362397" type="cannonGlass">
+                            <param id="0" name="Width">24</param>
+                            <param id="1" name="Height">48</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="370582351609146" type="System">
+                            <param id="0" name="Object to create">itemDiamond</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonGlass.X</param>
+                            <param id="3" name="Y">330</param>
+                        </action>
+                        <action id="0" name="Play" sid="527109985129977" type="Audio">
+                            <param id="0" name="Audio file">Glass (1)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="362252699327353">
+                    <conditions>
+                        <condition id="0" name="On function" sid="350244433313306" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="971060797446951" type="cannonEgg">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="955312543099926" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="462278085138226" type="cannonEgg">
+                            <param id="0" name="Width">24</param>
+                            <param id="1" name="Height">48</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="991440028708972" type="System">
+                            <param id="0" name="Object to create">itemClub</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonEgg.X</param>
+                            <param id="3" name="Y">330</param>
+                        </action>
+                        <action id="0" name="Play" sid="142278411084287" type="Audio">
+                            <param id="0" name="Audio file">Chick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243634016839978">
+                    <conditions>
+                        <condition id="0" name="On function" sid="972648708019646" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="167723714499621" type="cannonHeart">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="619706402383357" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="805615891864637" type="cannonHeart">
+                            <param id="0" name="Width">24</param>
+                            <param id="1" name="Height">48</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="859672023912176" type="System">
+                            <param id="0" name="Object to create">itemHeart</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonHeart.X</param>
+                            <param id="3" name="Y">330</param>
+                        </action>
+                        <action id="0" name="Play" sid="840514746833832" type="Audio">
+                            <param id="0" name="Audio file">Heart</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289668024612047">
+                    <conditions>
+                        <condition id="0" name="On function" sid="113349305797700" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="934501988999593" type="cannonOre">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="166961978051280" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="341065217924596" type="cannonOre">
+                            <param id="0" name="Width">24</param>
+                            <param id="1" name="Height">48</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="727358755774910" type="System">
+                            <param id="0" name="Object to create">itemSpade</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="X">cannonOre.X</param>
+                            <param id="3" name="Y">330</param>
+                        </action>
+                        <action id="0" name="Play" sid="785073097056805" type="Audio">
+                            <param id="0" name="Audio file">Ore</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906456001962005">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="829370516644013" type="itemClub" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="357887933093171" type="itemClub">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="509898464699062" type="cannonEgg">
+                            <param id="0" name="Object">ParticlesCannon</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="908637167019597" type="ParticlesCannon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="732889926205511">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="775332638426333" type="itemDiamond" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="990832649753038" type="itemDiamond">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="478050300670985" type="cannonGlass">
+                            <param id="0" name="Object">ParticlesCannon</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="585278288013629" type="ParticlesCannon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="102764952723959">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="755872039571989" type="itemHeart" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="249353415959910" type="itemHeart">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="666060830426244" type="cannonHeart">
+                            <param id="0" name="Object">ParticlesCannon</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="825076906317317" type="ParticlesCannon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="181700485353050">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="401974363160255" type="itemSpade" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="309539883965888" type="itemSpade">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="434659955853580" type="cannonOre">
+                            <param id="0" name="Object">ParticlesCannon</param>
+                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="202443829222121" type="ParticlesCannon">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="750362482185642" title="countUp">
+            <sub-events>
+                <event-block sid="472697850347518">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="283763414291330">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="670834703593436" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="615228857803147" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="530295590018359">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="918896997266437" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-34" name="Set layer background color" sid="753911166819231" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(210,240, 243)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="775067898243393" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="707127321097946" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(205,235, 253)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195016147657009">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="759901536424918">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="131961778283879" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="993745351577097" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="555992450370760" type="Function">
+                            <param id="0" name="Name">&quot;00&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="690597518542269">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="256477264232174" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="679045140035120" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="764556953345160" type="Function">
+                            <param id="0" name="Name">&quot;01&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843001101300164">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="869760782244666" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="217724939768653" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="263112060647537" type="Function">
+                            <param id="0" name="Name">&quot;02&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991157811713440">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="737904738130267" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="389246582842445" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="480300937096404" type="Function">
+                            <param id="0" name="Name">&quot;03&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126097348331616">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="932222962113465" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="945153843218168" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="280588724064035" type="Function">
+                            <param id="0" name="Name">&quot;04&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="166025424906583">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="489008471707929" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="301706964867341" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="225666458169325" type="Function">
+                            <param id="0" name="Name">&quot;05&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="730386986368840">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="981636641482965" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="171946772985556" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="733721023850037" type="Function">
+                            <param id="0" name="Name">&quot;06&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234213462487576">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="611895078759744">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="405965170047426" type="System">
+                            <param id="0" name="Variable">countUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">35</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="793533230019858" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="328544320241965" type="System" />
+                        <action id="-21" name="Reset global variables" sid="502725054504009" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="856283867019280">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="628064824512161">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="618730978687937">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="504046118933973" title="Patterns">
+            <sub-events>
+                <event-block sid="803205662674162">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="617177564926798">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="595413791746167">
+                    <conditions>
+                        <condition id="0" name="On function" sid="252128491849815" type="Function">
+                            <param id="0" name="Name">&quot;00&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="234288824615744" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="762029370429555" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="386136003119397" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="184197619386543" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="361100179605199" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="888119568169124" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="380300384170707" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="398071403894863">
+                    <conditions>
+                        <condition id="0" name="On function" sid="606776687939238" type="Function">
+                            <param id="0" name="Name">&quot;01&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="197071428331016" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="214090266656211" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="476271906536521" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="240637553962585" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="495409959511936" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="554990267520092" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="499491728597174" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="545331338152625">
+                    <conditions>
+                        <condition id="0" name="On function" sid="682417341386397" type="Function">
+                            <param id="0" name="Name">&quot;02&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="982607225481673" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="413044029123754" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="614060307655114" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="670738114557588" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="613973530327780" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="663760978953512" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="548961593044146" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="852179798965899" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="643650918856158" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="143971181396806" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="266889438338400" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="385734481210832">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="743425538131408">
+                    <conditions>
+                        <condition id="0" name="On function" sid="679763379222112" type="Function">
+                            <param id="0" name="Name">&quot;03&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="867763698600589" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="479287858898085" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="578887521692172" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="691369706992162" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="962433350271486" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="148141327832302" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="136993283808399" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="259584345861510" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="873226958141704" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="557776958229772" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="808124668736786" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="258913681992492" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="312283428723566" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="902184302048959" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="251306449776250" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848402446282504">
+                    <conditions>
+                        <condition id="0" name="On function" sid="128923732450608" type="Function">
+                            <param id="0" name="Name">&quot;04&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="430468030619892" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="586700872581312" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="308410665327950" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="268061657194794" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363598050521169">
+                    <conditions>
+                        <condition id="0" name="On function" sid="316542963248495" type="Function">
+                            <param id="0" name="Name">&quot;05&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="613497902817123" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="160586653459965" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="749230615157691" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="208043319013433" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="521089292678712" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="294266435698658" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="581072969299512" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="634843603488815">
+                    <conditions>
+                        <condition id="0" name="On function" sid="720653231778954" type="Function">
+                            <param id="0" name="Name">&quot;06&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="318735048382867" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="788230781568944" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="213206164399533" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="479953571888472" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="424144860506020" type="Function">
+                            <param id="0" name="Name">&quot;spade&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="253061747184977" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="622097651924712" type="Function">
+                            <param id="0" name="Name">&quot;heart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="651374044603362" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="807127523581262" type="Function">
+                            <param id="0" name="Name">&quot;diamond&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="872135089745929" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="536652518325942" type="Function">
+                            <param id="0" name="Name">&quot;club&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="755168576029510">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="905123402696692">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="117628448549764">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="332758534728420">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="548961643666424" title="Simon Says">
+            <sub-events>
+                <event-block disabled="1" sid="638775835952453">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block disabled="1" sid="452251863495712">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="274761640647799" type="Simon">
+                            <param id="0" name="Animation">&quot;Egg&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="647757505686585" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="251621633096788" type="Audio">
+                            <param id="0" name="Audio file">Chick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="197313251452234">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="217699839733857" type="Simon">
+                            <param id="0" name="Animation">&quot;Glass&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="214122240578097" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="454668030040594" type="Audio">
+                            <param id="0" name="Audio file">Glass (1)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="819133941137540">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="357856528664342" type="Simon">
+                            <param id="0" name="Animation">&quot;Heart&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="862194062114406" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="818860517401387" type="Audio">
+                            <param id="0" name="Audio file">Heart</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="765419702928172">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="756314779861774" type="Simon">
+                            <param id="0" name="Animation">&quot;Ore&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="689534720957368" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="520070556218633" type="Audio">
+                            <param id="0" name="Audio file">Ore</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block disabled="1" sid="337552008555604">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="514023375006677" type="System">
+                            <param id="0" name="Interval (seconds)">random(5,6)</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="178327029415343" type="Touch">
+                            <param id="0" name="Object">itemClub</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="816941684456039" type="itemClub" />
+                        <action id="-16" name="Wait" sid="635339973826314" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="172130027356606" type="System">
+                            <param id="0" name="Object to create">itemClub</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="788831807921010">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="299882475276292" type="System">
+                            <param id="0" name="Interval (seconds)">random(5,6)</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="621642218751467" type="Touch">
+                            <param id="0" name="Object">itemHeart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="942860934226845" type="itemHeart" />
+                        <action id="-16" name="Wait" sid="723994367144125" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="101472859551515" type="System">
+                            <param id="0" name="Object to create">itemHeart</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="160270028409180">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="100074195164782" type="System">
+                            <param id="0" name="Interval (seconds)">random(5,6)</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="183813886703904" type="Touch">
+                            <param id="0" name="Object">itemDiamond</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="453984931413945" type="itemDiamond" />
+                        <action id="-16" name="Wait" sid="919222802296252" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="161719121996742" type="System">
+                            <param id="0" name="Object to create">itemDiamond</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="134184899752149">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="292650656129683" type="System">
+                            <param id="0" name="Interval (seconds)">random(5,6)</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="711635755742040" type="Touch">
+                            <param id="0" name="Object">itemSpade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="686028935336655" type="itemSpade" />
+                        <action id="-16" name="Wait" sid="612046468905821" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="233799420645341" type="System">
+                            <param id="0" name="Object to create">itemSpade</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(LayoutWidth)</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="934386343762597">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="354381018602296" title="Group" />
+        <event-group description="" sid="276236807255046" title="Group2" />
+        <event-group description="" sid="811615691153191" title="Group3" />
+    </events>
+</c2eventsheet>
